@@ -15,13 +15,13 @@
 
     /* logos social medias */
     /* by Freepik */
-    --logo-instagram: url("imgs/logos-icons/logo-instagram.png");
+    --logo-instagram: url("../imgs/logos-icons/logo-instagram.png");
     /* by Google */
-    --logo-linkedin: url("imgs/logos-icons/logo-linkedin.png");
+    --logo-linkedin: url("../imgs/logos-icons/logo-linkedin.png");
     /* by  Pixel perfect */
-    --logo-github: url("imgs/logos-icons/logo-github.png");
+    --logo-github: url("../imgs/logos-icons/logo-github.png");
     /* by Freepik */
-    --icon-curriculum: url("imgs/logos-icons/icon-curriculum.png");
+    --icon-curriculum: url("../imgs/logos-icons/icon-curriculum.png");
 
     /* colors */
     /* gradient */
