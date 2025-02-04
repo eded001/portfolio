@@ -65,12 +65,16 @@ header > section > #title > .full-stack > .icons > ul li > a#linkedin {
 header > section > #title > .full-stack > .icons > ul li > a#github {
     background: transparent var(--logo-github) no-repeat center center;
 }
+header > section > #title > .full-stack > .icons > ul li > a#dev-community {
+    background: transparent var(--logo-dev-community) no-repeat center center;
+}
 header > section > #title > .full-stack > .icons > ul li > a#curriculum {
     background: transparent var(--icon-curriculum) no-repeat center center;
 }
 header > section > #title > .full-stack > .icons > ul li > a#instagram,
 header > section > #title > .full-stack > .icons > ul li > a#linkedin,
 header > section > #title > .full-stack > .icons > ul li > a#github,
+header > section > #title > .full-stack > .icons > ul li > a#dev-community,
 header > section > #title > .full-stack > .icons > ul li > a#curriculum {
     background-size: var(--size) var(--size);
 }
