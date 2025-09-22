@@ -1,5 +1,6 @@
 import Title from "@/components/Title";
 import { Badge, Box, Button, Card, Flex, For, Link, Stack, Text } from "@chakra-ui/react";
+import { LuExternalLink } from "react-icons/lu";
 
 export default function Projects() {
     const projects = [
@@ -25,7 +26,7 @@ export default function Projects() {
             title: "Call Center (Help Now)",
             description: (
                 <>
-                    Full-stack web platform for ticket management, developed for <Link href="https://semcult.belem.pa.gov.br/">SEMCULT (Secretaria Municipal de Cultura e Turismo)</Link>. Includes authentication, real-time communication via WebSocket, and persistence with Prisma and SQLite.
+                    Full-stack web platform for ticket management, developed for <Link href="https://semcult.belem.pa.gov.br/">SEMCULT<LuExternalLink /></Link>. Includes authentication, real-time communication via WebSocket, and persistence with Prisma and SQLite.
                 </>
             ),
             link: "http://github.com/semcult-belem/central-chamados",
@@ -44,11 +45,11 @@ export default function Projects() {
                     {(project, idx) => (
                         <Card.Root key={idx} border="1px solid gray" width="300px">
                             <Card.Header>
-                                <Card.Title>{project.title}</Card.Title>
+                                <Card.Title textAlign={"center"}>{project.title}</Card.Title>
                             </Card.Header>
                             <Card.Body>
                                 <Card.Description>
-                                    <Text lineClamp={3}>{project.description}</Text>
+                                    <Text textAlign={"justify"}>{project.description}</Text>
                                 </Card.Description>
                                 <Stack mt={3} direction="row" wrap="wrap" spacing={2}>
                                     {project.stacks.map((stack, i) => (
@@ -58,10 +59,9 @@ export default function Projects() {
                                     ))}
                                 </Stack>
                             </Card.Body>
-                            <Card.Footer gap={2}>
-                                <Button size="sm">Details</Button>
+                            <Card.Footer gap={2} justifyContent={"center"}>
                                 <Button as="a" href={project.link} target="_blank" variant="surface" size="sm">
-                                    View repository
+                                    See more <LuExternalLink />
                                 </Button>
                             </Card.Footer>
                         </Card.Root>

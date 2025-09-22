@@ -1,6 +1,7 @@
 import Title from "@/components/Title";
 
 import { Box, Wrap, HoverCard, Portal, Text } from "@chakra-ui/react";
+import * as motion from "motion/react-client";
 
 // language icons
 import {
@@ -59,22 +60,26 @@ export default function TechStack() {
         {Object.values(stacks).flat().map(({ icon: IconComponent, color, name }, index) => (
           <HoverCard.Root key={index}>
             <HoverCard.Trigger asChild>
-              <Box
-                bg="gray.700"
-                p={3}
-                borderRadius="md"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                cursor="pointer"
-                transition="all 0.3s ease"
-                _hover={{
-                  bg: color,
-                  transform: "scale(1.25)",
-                }}
+              <motion.button
+                whileHover={{ scale: 1.2 }}
               >
-                <IconComponent size={40} color="white" />
-              </Box>
+                <Box
+                  bg="gray.700"
+                  p={3}
+                  borderRadius="md"
+                  transition="all 0.3s ease"
+                  _hover={{
+                    bg: color,
+                    transform: "scale(1.25)",
+                  }}
+                >
+                  <motion.button
+                    whileTap={{ scale: 0.8 }}
+                  >
+                    <IconComponent cursor="pointer" size={40} color="white" />
+                  </motion.button>
+                </Box>
+              </motion.button>
             </HoverCard.Trigger>
 
             <Portal>
