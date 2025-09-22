@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Presentation() {
-    const roles = ["Full Stack", "Mobile"];
+    const roles = ["Full Stack", "Mobile", "Frontend", "Backend"];
     const [index, setIndex] = useState(0);
     const [subText, setSubText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
