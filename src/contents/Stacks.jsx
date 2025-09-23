@@ -60,9 +60,7 @@ export default function TechStack() {
         {Object.values(stacks).flat().map(({ icon: IconComponent, color, name }, index) => (
           <HoverCard.Root key={index}>
             <HoverCard.Trigger asChild>
-              <motion.button
-                whileHover={{ scale: 1.2 }}
-              >
+              <motion.button whileHover={{ scale: 1.2 }}>
                 <Box
                   bg="gray.700"
                   p={3}

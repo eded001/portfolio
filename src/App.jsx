@@ -9,13 +9,17 @@ import About from './contents/About';
 import Stacks from './contents/Stacks';
 import Projects from './contents/Projects';
 import ContactMe from './contents/ContactMe';
-import FloatingButtons from './contents/FloatingButtons';
+import Expertise from './contents/Expertise';
 
 export default function App() {
   return (
     <Box>
       <Section>
         <Presentation />
+      </Section>
+
+      <Section>
+        <Expertise />
       </Section>
 
       <Section>
@@ -33,8 +37,6 @@ export default function App() {
       <Section>
         <ContactMe />
       </Section>
-
-      <FloatingButtons />
     </Box>
   )
 }

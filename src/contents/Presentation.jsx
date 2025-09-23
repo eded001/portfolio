@@ -1,88 +1,127 @@
-import { Stack, Text, Wrap } from "@chakra-ui/react";
+import Icon from "@/components/Icon";
+import { Stack, Text, HStack, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
+
+const MotionStack = motion(Stack);
+const MotionText = motion(Text);
+const MotionFlex = motion(Flex)
 
 export default function Presentation() {
-    const roles = ["Full Stack", "Mobile", "Frontend", "Backend"];
-    const [index, setIndex] = useState(0);
-    const [subText, setSubText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
-
-    useEffect(() => {
-        const current = roles[index];
-        let timer;
-
-        if (isDeleting) {
-            timer = setTimeout(() => {
-                setSubText((prev) => prev.slice(0, -1));
-                if (subText === "") {
-                    setIsDeleting(false);
-                    setIndex((prev) => (prev + 1) % roles.length);
-                }
-            }, 100); // velocidade de apagar
-        } else {
-            if (subText !== current) {
-                timer = setTimeout(() => {
-                    setSubText(current.slice(0, subText.length + 1));
-                }, 150); // velocidade de digitar
-            } else {
-                timer = setTimeout(() => setIsDeleting(true), 1500); // tempo de espera antes de apagar
-            }
-        }
-
-        return () => clearTimeout(timer);
-    }, [subText, isDeleting, index, roles]);
-
+    const size = 25;
     return (
-        <Wrap align={"center"} gap={20}>
-            <Stack>
-                <Text fontSize={"2xl"}>Hello, my name is</Text>
-                <Text fontSize={"8xl"} as={"span"}>
-                    Edgar Souza
-                </Text>
-                <Text fontSize={"2xl"}>
-                    Dev Full Stack | Dev Mobile | Aspiring Tech Lead
-                </Text>
-            </Stack>
-
-            <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                    duration: 0.8,
-                    delay: 0.1,
-                    ease: [0, 0.71, 0.2, 1.01],
+        <Flex align="center" justify="space-between" w="100%" wrap={"wrap"}>
+            <MotionStack
+                initial="hidden"
+                animate="visible"
+                spacing={2}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1 }
                 }}
             >
-                <Stack>
-                    <Text fontSize="7xl" fontWeight="light" fontFamily="monospace">
-                        <Text as="span" fontWeight="bold">
-                            &lt;
-                        </Text>
+                <HStack spacing={2}>
+                    <MotionText
+                        fontSize="2xl"
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.8, delay: 0.5 }
+                            }
+                        }}
+                    >
+                        Hello,
+                    </MotionText>
 
-                        Dev{" "}
-                        <motion.span
-                            key={subText}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.1 }}
-                        >
-                            {subText}
-                        </motion.span>
+                    <MotionText
+                        fontSize="2xl"
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.8, delay: 1 }
+                            }
+                        }}
+                    >
+                        my name is
+                    </MotionText>
+                </HStack>
 
-                        <motion.span
-                            animate={{ opacity: [0, 1, 0] }}
-                            transition={{ repeat: Infinity, duration: 1 }}
-                            style={{ display: "inline-block" }}
-                        >
-                            |
-                        </motion.span>
+                <MotionText
+                    fontSize="8xl"
+                    as="span"
+                    fontWeight="bold"
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: { duration: 1.5, delay: 1.5 }
+                        }
+                    }}
+                >
+                    Edgar Augusto
+                </MotionText>
 
-                        <Text as="span" fontWeight="bold">
-                            /&gt;
-                        </Text>
+                <MotionText
+                    fontSize="2xl"
+                    variants={{
+                        hidden: { opacity: 0, y: -20 },
+                        visible: {
+                            opacity: 1,
+                            y: 0,
+                            transition: { duration: 0.8, delay: 3 }
+                        }
+                    }}
+                >
+                    Dev Full Stack | Dev Mobile | Aspiring Tech Lead
+                </MotionText>
+            </MotionStack>
+
+            <Flex direction="column" justify="center" align="center" flex="1" position={"relative"}>
+                <MotionText
+                    textAlign="center"
+                    fontFamily="monospace"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
+                >
+                    <Text as="span" fontSize="6xl" fontWeight="bold">
+                        &lt;
                     </Text>
-                </Stack>
-            </motion.div>
-        </Wrap>
+
+                    <Text as="span" fontSize="8xl" fontWeight="light">
+                        EA
+                    </Text>
+
+                    <Text as="span" fontSize="6xl" fontWeight="bold">
+                        /&gt;
+                    </Text>
+                </MotionText>
+
+                <MotionFlex
+                    gap={4}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 3, ease: "easeOut" }}
+                    position={"absolute"}
+                    bottom={-3}
+                >
+                    <Icon href="https://instagram.com/eded.dev">
+                        <SiInstagram color={"#fff"} size={size} />
+                    </Icon>
+
+                    <Icon href="https://github.com/eded001">
+                        <SiGithub color={"#fff"} size={size} />
+                    </Icon>
+
+                    <Icon href="https://www.linkedin.com/in/edgar-augusto/">
+                        <SiLinkedin color={"#fff"} size={size} />
+                    </Icon>
+                </MotionFlex>
+            </Flex>
+        </Flex>
     );
 }

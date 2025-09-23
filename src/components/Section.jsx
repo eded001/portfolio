@@ -1,12 +1,14 @@
-import { Center } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
-export default function Section({ children }) {
+export default function Section({ children, justfiy = "center", align = "center" }) {
     return (
-        <Center
+        <Stack
             minHeight={"100dvh"}
             border={"1px solid"}
+            justifyContent={justfiy}
+            alignItems={align}
         >
             {children}
-        </Center>
+        </Stack>
     );
 }
