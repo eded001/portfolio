@@ -1,28 +1,40 @@
-import Icon from "@/components/Icon";
-import { Stack, Text, HStack, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
-const MotionStack = motion(Stack);
-const MotionText = motion(Text);
-const MotionFlex = motion(Flex)
+const MotionDiv = motion.div;
+const MotionSpan = motion.span;
+
+function Icon({ href, children }) {
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+        >
+            {children}
+        </a>
+    );
+}
 
 export default function Presentation() {
     const size = 25;
+
     return (
-        <Flex align="center" justify="space-between" w="100%" wrap={"wrap"}>
-            <MotionStack
+        <div className="flex flex-wrap justify-between items-center w-full">
+            {/* Texto principal */}
+            <MotionDiv
                 initial="hidden"
                 animate="visible"
-                spacing={2}
+                className="flex flex-col space-y-2"
                 variants={{
                     hidden: { opacity: 0 },
                     visible: { opacity: 1 }
                 }}
             >
-                <HStack spacing={2}>
-                    <MotionText
-                        fontSize="2xl"
+                <div className="flex space-x-2">
+                    <MotionSpan
+                        className="text-2xl"
                         variants={{
                             hidden: { opacity: 0, y: 20 },
                             visible: {
@@ -33,10 +45,10 @@ export default function Presentation() {
                         }}
                     >
                         Hello,
-                    </MotionText>
+                    </MotionSpan>
 
-                    <MotionText
-                        fontSize="2xl"
+                    <MotionSpan
+                        className="text-2xl"
                         variants={{
                             hidden: { opacity: 0, y: 20 },
                             visible: {
@@ -47,13 +59,11 @@ export default function Presentation() {
                         }}
                     >
                         my name is
-                    </MotionText>
-                </HStack>
+                    </MotionSpan>
+                </div>
 
-                <MotionText
-                    fontSize="8xl"
-                    as="span"
-                    fontWeight="bold"
+                <MotionSpan
+                    className="text-8xl font-bold"
                     variants={{
                         hidden: { opacity: 0 },
                         visible: {
@@ -63,10 +73,10 @@ export default function Presentation() {
                     }}
                 >
                     Edgar Augusto
-                </MotionText>
+                </MotionSpan>
 
-                <MotionText
-                    fontSize="2xl"
+                <MotionSpan
+                    className="text-2xl"
                     variants={{
                         hidden: { opacity: 0, y: -20 },
                         visible: {
@@ -77,37 +87,27 @@ export default function Presentation() {
                     }}
                 >
                     Dev Full Stack | Dev Mobile | Aspiring Tech Lead
-                </MotionText>
-            </MotionStack>
+                </MotionSpan>
+            </MotionDiv>
 
-            <Flex direction="column" justify="center" align="center" flex="1" position={"relative"}>
-                <MotionText
-                    textAlign="center"
-                    fontFamily="monospace"
+            {/* Logo EA + Ícones */}
+            <div className="flex flex-col justify-center items-center flex-1 relative">
+                <MotionDiv
+                    className="text-center font-mono"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
                 >
-                    <Text as="span" fontSize="6xl" fontWeight="bold">
-                        &lt;
-                    </Text>
+                    <span className="text-6xl font-bold">&lt;</span>
+                    <span className="text-8xl font-light">EA</span>
+                    <span className="text-6xl font-bold">/&gt;</span>
+                </MotionDiv>
 
-                    <Text as="span" fontSize="8xl" fontWeight="light">
-                        EA
-                    </Text>
-
-                    <Text as="span" fontSize="6xl" fontWeight="bold">
-                        /&gt;
-                    </Text>
-                </MotionText>
-
-                <MotionFlex
-                    gap={4}
+                <MotionDiv
+                    className="flex gap-4 absolute -bottom-3"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 3, ease: "easeOut" }}
-                    position={"absolute"}
-                    bottom={-3}
                 >
                     <Icon href="https://instagram.com/eded.dev">
                         <SiInstagram color={"#fff"} size={size} />
@@ -120,8 +120,8 @@ export default function Presentation() {
                     <Icon href="https://www.linkedin.com/in/edgar-augusto/">
                         <SiLinkedin color={"#fff"} size={size} />
                     </Icon>
-                </MotionFlex>
-            </Flex>
-        </Flex>
+                </MotionDiv>
+            </div>
+        </div>
     );
 }

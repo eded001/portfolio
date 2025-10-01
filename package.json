@@ -13,17 +13,18 @@
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.2",
-    "@chakra-ui/react": "^3.27.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@icons-pack/react-simple-icons": "^13.7.0",
+    "@tailwindcss/vite": "^4.1.14",
     "framer-motion": "^12.23.18",
     "motion": "^12.23.18",
     "next-themes": "^0.4.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
-    "simple-icons": "^15.15.0"
+    "simple-icons": "^15.15.0",
+    "tailwindcss": "^4.1.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

@@ -1,4 +1,4 @@
-import { Box, Card } from "@chakra-ui/react";
+import { Box, Card, Stack } from "@chakra-ui/react";
 
 import Title from "@/components/Title";
 import Subtitle from "@/components/Subtitle";
