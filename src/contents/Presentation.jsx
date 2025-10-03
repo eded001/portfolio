@@ -90,8 +90,7 @@ export default function Presentation() {
                 </MotionSpan>
             </MotionDiv>
 
-            {/* Logo EA + Ícones */}
-            <div className="flex flex-col justify-center items-center flex-1 relative">
+            <div className="flex flex-col justify-center items-center flex-1">
                 <MotionDiv
                     className="text-center font-mono"
                     initial={{ opacity: 0 }}
@@ -104,21 +103,21 @@ export default function Presentation() {
                 </MotionDiv>
 
                 <MotionDiv
-                    className="flex gap-4 absolute -bottom-3"
+                    className="flex gap-4"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 3, ease: "easeOut" }}
                 >
                     <Icon href="https://instagram.com/eded.dev">
-                        <SiInstagram color={"#fff"} size={size} />
+                        <SiInstagram color={"#000"} size={size} />
                     </Icon>
 
                     <Icon href="https://github.com/eded001">
-                        <SiGithub color={"#fff"} size={size} />
+                        <SiGithub color={"#000"} size={size} />
                     </Icon>
 
                     <Icon href="https://www.linkedin.com/in/edgar-augusto/">
-                        <SiLinkedin color={"#fff"} size={size} />
+                        <SiLinkedin color={"#000"} size={size} />
                     </Icon>
                 </MotionDiv>
             </div>

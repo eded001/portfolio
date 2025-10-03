@@ -15,7 +15,7 @@ export default function App() {
         <Presentation />
       </Section>
 
-      {/* <Section>
+      <Section>
         <About />
       </Section>
 
@@ -29,7 +29,7 @@ export default function App() {
 
       <Section>
         <ContactMe />
-      </Section> */}
+      </Section>
     </>
   );
 }

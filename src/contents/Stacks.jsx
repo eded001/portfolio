@@ -1,9 +1,8 @@
 import Title from "@/components/Title";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
-import { Box, Wrap, HoverCard, Portal, Text } from "@chakra-ui/react";
-import * as motion from "motion/react-client";
-
-// language icons
+// icons
 import {
   SiApachemaven, SiCss3, SiDocker,
   SiElectron, SiExpo, SiExpress,
@@ -25,7 +24,7 @@ export default function TechStack() {
     ],
     backEnd: [
       { icon: SiNodedotjs, color: "#339933", name: "Node.js" },
-      { icon: SiPython, color: "#FFCD3B", name: "Python" },
+      { icon: SiPython, color: "#FFD43B", name: "Python" },
       { icon: AiOutlineJava, color: "#EB2025", name: "Java" },
       { icon: SiTypescript, color: "#3178C6", name: "TypeScript" },
       { icon: SiPhp, color: "#777BB4", name: "PHP" },
@@ -53,44 +52,29 @@ export default function TechStack() {
   };
 
   return (
-    <Box>
+    <div className="space-y-6">
       <Title>Stacks</Title>
 
-      <Wrap gap={20} align="center" justify="center">
+      <div className="flex flex-wrap gap-6 justify-center selection:">
         {Object.values(stacks).flat().map(({ icon: IconComponent, color, name }, index) => (
-          <HoverCard.Root key={index}>
-            <HoverCard.Trigger asChild>
-              <motion.button whileHover={{ scale: 1.2 }}>
-                <Box
-                  bg="gray.700"
-                  p={3}
-                  borderRadius="md"
-                  transition="all 0.3s ease"
-                  _hover={{
-                    bg: color,
-                    transform: "scale(1.25)",
-                  }}
-                >
-                  <motion.button
-                    whileTap={{ scale: 0.8 }}
-                  >
-                    <IconComponent cursor="pointer" size={40} color="white" />
-                  </motion.button>
-                </Box>
-              </motion.button>
-            </HoverCard.Trigger>
-
-            <Portal>
-              <HoverCard.Positioner>
-                <HoverCard.Content maxWidth="200px">
-                  <HoverCard.Arrow />
-                  <Text fontWeight="bold" textAlign="center">{name}</Text>
-                </HoverCard.Content>
-              </HoverCard.Positioner>
-            </Portal>
-          </HoverCard.Root>
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="cursor-pointer"
+          >
+            <Card
+              className="w-28 h-28 flex flex-col items-center justify-center rounded-2xl shadow-md hover:shadow-lg transition-all"
+              style={{ backgroundColor: color }}
+            >
+              <CardContent className="flex flex-col items-center justify-center gap-2 p-0">
+                <IconComponent size={40} color="white" />
+                <span className="text-sm font-semibold text-white user select-none">{name}</span>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </Wrap>
-    </Box>
+      </div>
+    </div>
   );
 }
