@@ -12,7 +12,11 @@ export default function ContactMe() {
             </p>
 
             <Button asChild>
-                <a href="mailto:edgarams.profissional@gmail.com">Say hello</a>
+                <a href="https://www.linkedin.com/in/edgar-augusto/" target="_blank">Send me an email</a>
+            </Button>
+
+            <Button asChild>
+                <a href="mailto:edgarams.profissional@gmail.com" target="_blank">Send me an email</a>
             </Button>
         </div>
     );

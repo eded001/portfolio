@@ -1,6 +1,6 @@
-export default function Section({ children, justify = "center", align = "center" }) {
+export default function Section({ children, justify = "center", align = "center", height = "100dvh", padding = 10 }) {
     return (
-        <div className={`min-h-[100dvh] flex justify-${justify} items-${align} border-2 border-black p-10`}>
+        <div className={`min-h-[${height}] flex justify-${justify} items-${align} p-${padding} border-2 border-black bg-[-primary-foreground]`}>
             {children}
         </div>
     );

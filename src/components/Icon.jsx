@@ -1,19 +1,19 @@
-import { Circle } from "@chakra-ui/react";
+// import { Circle } from "@chakra-ui/react";
 
-export default function Icon({ children, href, bg }) {
-    const sizeIcon = "2.5rem";
+// export default function Icon({ children, href, bg }) {
+//     const sizeIcon = "2.5rem";
 
-    return (
-        <Circle
-            as={"a"}
-            target={"_blank"}
-            w={sizeIcon}
-            h={sizeIcon}
+//     return (
+//         <Circle
+//             as={"a"}
+//             target={"_blank"}
+//             w={sizeIcon}
+//             h={sizeIcon}
 
-            href={href}
-            bg={bg}
-        >
-            {children}
-        </Circle>
-    );
-}
+//             href={href}
+//             bg={bg}
+//         >
+//             {children}
+//         </Circle>
+//     );
+// }

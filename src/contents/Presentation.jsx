@@ -19,9 +19,14 @@ function Icon({ href, children }) {
 
 export default function Presentation() {
     const size = 25;
+    const socialMedias = [
+        { href: "https://instagram.com/eded.dev", icon: SiInstagram },
+        { href: "https://github.com/eded001", icon: SiGithub },
+        { href: "https://www.linkedin.com/in/edgar-augusto/", icon: SiLinkedin }
+    ];
 
     return (
-        <div className="flex flex-wrap justify-between items-center w-full">
+        <div className="flex flex-wrap justify-between items-center w-full -z-1">
             {/* Texto principal */}
             <MotionDiv
                 initial="hidden"
@@ -32,7 +37,7 @@ export default function Presentation() {
                     visible: { opacity: 1 }
                 }}
             >
-                <div className="flex space-x-2">
+                <div className="flex space-x-1">
                     <MotionSpan
                         className="text-2xl"
                         variants={{
@@ -76,7 +81,7 @@ export default function Presentation() {
                 </MotionSpan>
 
                 <MotionSpan
-                    className="text-2xl"
+                    className="text-2xl pt-5"
                     variants={{
                         hidden: { opacity: 0, y: -20 },
                         visible: {
@@ -90,9 +95,9 @@ export default function Presentation() {
                 </MotionSpan>
             </MotionDiv>
 
-            <div className="flex flex-col justify-center items-center flex-1">
+            <div className="flex justify-center items-center flex-1 relative">
                 <MotionDiv
-                    className="text-center font-mono"
+                    className="font-mono absolute"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
@@ -103,22 +108,24 @@ export default function Presentation() {
                 </MotionDiv>
 
                 <MotionDiv
-                    className="flex gap-4"
+                    className="flex gap-5 absolute top-15 mb-5"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 3, ease: "easeOut" }}
                 >
-                    <Icon href="https://instagram.com/eded.dev">
-                        <SiInstagram color={"#000"} size={size} />
-                    </Icon>
-
-                    <Icon href="https://github.com/eded001">
-                        <SiGithub color={"#000"} size={size} />
-                    </Icon>
-
-                    <Icon href="https://www.linkedin.com/in/edgar-augusto/">
-                        <SiLinkedin color={"#000"} size={size} />
-                    </Icon>
+                    {
+                        socialMedias.map((media, index) => (
+                            <MotionDiv
+                                key={index}
+                                whileHover={{ scale: 1.5 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                <Icon href={media.href}>
+                                    <media.icon color={"#171717"} size={size} />
+                                </Icon>
+                            </MotionDiv>
+                        ))
+                    }
                 </MotionDiv>
             </div>
         </div>

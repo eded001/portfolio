@@ -55,11 +55,11 @@ export default function TechStack() {
     <div className="space-y-6">
       <Title>Stacks</Title>
 
-      <div className="flex flex-wrap gap-6 justify-center selection:">
+      <div className="flex flex-wrap gap-6 justify-center">
         {Object.values(stacks).flat().map(({ icon: IconComponent, color, name }, index) => (
           <motion.div
             key={index}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             className="cursor-pointer"
           >
