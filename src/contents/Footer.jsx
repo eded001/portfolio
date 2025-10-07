@@ -29,21 +29,17 @@ export default function Footer() {
 
             <ul className="flex justify-center space-x-5 my-2">
                 {socialMedias.map((social) => (
-                    <li
+                    <motion.li
                         key={social.name}
+                        initial={{ color: "transparent" }}
+                        whileHover={{ color: social.hoverColor }}
+                        transition={{ duration: 0.3 }}
                         className={`${social.bg} bg-clip-text font-extrabold text-transparent p-1 rounded-md cursor-pointer`}
                     >
-                        <motion.li
-                            key={social.name}
-                            initial={{ color: "transparent" }}
-                            whileHover={{ color: social.hoverColor }}
-                            transition={{ duration: 0.3 }}
-                        >
-                            <Anchor href={social.href} target="_blank" className={`${social.bg} bg-clip-text text-transparent`}>
-                                {social.name}
-                            </Anchor>
-                        </motion.li>
-                    </li>
+                        <Anchor href={social.href} target="_blank" className={`${social.bg} bg-clip-text text-transparent`}>
+                            {social.name}
+                        </Anchor>
+                    </motion.li>
                 ))}
             </ul>
 
