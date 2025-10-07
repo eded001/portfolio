@@ -101,19 +101,19 @@ export default function Presentation() {
             <div className="flex flex-col items-center select-none relative">
                 <div className="w-75 relative z-10 flex justify-center">
                     <MotionDiv
-                        initial={{ clipPath: "circle(0% at 50% 50%)" }} // começa invisível no centro
-                        animate={{ clipPath: "circle(50% at 50% 50%)" }} // revela até cobrir metade (ajuste conforme tamanho)
+                        initial={{ clipPath: "circle(0% at 50% 50%)" }}
+                        animate={{ clipPath: "circle(50% at 50% 50%)" }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
                         className="w-64 h-64 mask-radial-closest-side mask-radial-from-90% mask-radial-at-[50%_50%] bg-cover bg-center bg-[url(https://frogs.media/static/frog.png)]"
                     />
                 </div>
 
-                <div className="absolute -bottom-8 flex space-x-5 z-0">
+                <div className="absolute -bottom-8 flex space-x-5">
                     {socialMedias.map(({ href, icon: Icon }, index) => (
                         <MotionDiv
                             key={index}
-                            initial={{ opacity: 0, y: -40, x: (index - 1) * 20, scale: 0.5 }} // <- começa acima da imagem
-                            animate={{ opacity: 1, y: 0, x: 0, scale: 1 }} // <- "desce" para a posição final
+                            initial={{ opacity: 0, y: -40, x: (index - 1) * 20, scale: 0.5 }}
+                            animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
                             transition={{
                                 type: "spring",
                                 stiffness: 120,
