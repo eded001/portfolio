@@ -1,5 +1,6 @@
 import Anchor from "@/components/Anchor";
 import { motion } from "framer-motion";
+import { FaHeart } from "react-icons/fa";
 
 export default function Footer() {
     const socialMedias = [
@@ -24,8 +25,8 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="h-[10dvh] p-2 text-center text-sm">
-            <p>Let's networking on</p>
+        <footer className="h-[25dvh] flex flex-col justify-center p-2 text-center text-sm">
+            <p>Please, don't forget to follow me in my social</p>
 
             <ul className="flex justify-center space-x-5 my-2">
                 {socialMedias.map((social) => (
@@ -43,7 +44,7 @@ export default function Footer() {
                 ))}
             </ul>
 
-            <p>Made by <b>Edgar Augusto</b> with <b>React</b> and <b>TailwindCSS</b> | Hosted on <b>GitHub Pages</b></p>
+            <p>Made with <FaHeart color="#f00" className="inline-block" /> by <b className="font-mono">Edgar Augusto</b> with <b className="font-mono text-[#00D8FF]">React</b> and <b className="font-mono text-[#35BEF8]">TailwindCSS</b></p>
         </footer>
     );
 }

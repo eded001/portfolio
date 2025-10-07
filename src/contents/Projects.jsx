@@ -2,7 +2,7 @@ import Title from "@/components/Title";
 import { LuExternalLink } from "react-icons/lu";
 
 // components
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -10,6 +10,7 @@ export default function Projects() {
     const projects = [
         {
             title: "Duck Manager",
+            type: "Application Desktop",
             description:
                 "Desktop application developed in Electron for product management, with integration between Java and JavaScript, focused on simplicity and productivity for internal control.",
             link: "http://github.com/amazonext/duck-manager",
@@ -17,6 +18,7 @@ export default function Projects() {
         },
         {
             title: "Calop Agender",
+            type: "Application Mobile",
             description:
                 "Mobile application created in React Native for scheduling services, using SQLite for data persistence and providing a practical and intuitive user experience.",
             link: "http://github.com/amazonext/calop-agender",
@@ -24,6 +26,7 @@ export default function Projects() {
         },
         {
             title: "Breastfeeding Informative",
+            type: "Application Web Front End",
             description:
                 "Freelance informational website with a focus on accessibility and clean design, dedicated to raising awareness and disseminating information about breastfeeding.",
             link: "https://eded001.github.io/aleitamento-materno/",
@@ -31,6 +34,7 @@ export default function Projects() {
         },
         {
             title: "Call Center (Help Now)",
+            type: "Application Web Full Stack",
             description: (
                 <>
                     Full-stack web platform for ticket management, developed for {" "}
@@ -41,7 +45,7 @@ export default function Projects() {
                         className="text-blue-600 hover:underline inline-flex items-center"
                     >
                         SEMCULT <LuExternalLink className="ml-1 h-4 w-4" />
-                    </a> (Municipal Department of Culture and Tourism). Includes authentication, real-time communication via WebSocket, and persistence with Prisma and SQLite.
+                    </a> (Secretaria Municipal de Cultura e Turismo - Municipal Department of Culture and Tourism). Includes authentication, real-time communication via WebSocket, and persistence with Prisma and SQLite.
                 </>
             ),
             link: "http://github.com/semcult-belem/central-chamados",
@@ -50,7 +54,7 @@ export default function Projects() {
     ];
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-6" id="projects">
             <Title>Projects</Title>
 
             <div className="flex flex-wrap gap-4 justify-center items-start">
@@ -60,7 +64,9 @@ export default function Projects() {
                     projects.map((project, idx) => (
                         <Card key={idx} className="w-[300px] border">
                             <CardHeader>
+                                <img src="https://frogs.media/static/frog.png" className="rounded-xl" />
                                 <CardTitle className="text-center">{project.title}</CardTitle>
+                                <CardDescription className="text-center">{project.type}</CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <p className="text-justify text-sm">
@@ -68,7 +74,7 @@ export default function Projects() {
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-3">
                                     {project.stacks.map((stack, i) => (
-                                        <Badge key={i}>{stack}</Badge>
+                                        <Badge key={i} className="select-none">{stack}</Badge>
                                     ))}
                                 </div>
                             </CardContent>

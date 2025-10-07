@@ -17,7 +17,7 @@ export default function App() {
         <Header />
       </span>
 
-      <Section height={80} padding={20} paddingTop={"15dvh"}>
+      <Section height={80} padding={100} paddingTop={"15dvh"}>
         <Presentation />
       </Section>
 

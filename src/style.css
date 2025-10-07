@@ -123,3 +123,8 @@
   background: var(--primary);
   color: var(--primary-foreground);
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 30%;
+}

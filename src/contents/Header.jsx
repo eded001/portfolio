@@ -16,9 +16,9 @@ export default function Header() {
 
     return (
         <div className="top-0 fixed flex justify-between min-h-[10dvh] w-full px-10 py-5 backdrop-blur-sm backdrop-grayscale-25 z-20">
-            <div className="flex space-x-1 items-center select-none">
+            <div className="flex space-x-1 items-center select-none text-2xl">
                 <Logo />
-                <div>Edgar Augusto</div>
+                <p>Edgar Augusto</p>
             </div>
 
             <nav className="flex space-x-5 items-center">
