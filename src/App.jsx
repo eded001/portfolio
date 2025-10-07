@@ -13,9 +13,11 @@ import Footer from './contents/Footer';
 export default function App() {
   return (
     <>
-      <Header />
+      <span className="flex justify-center">
+        <Header />
+      </span>
 
-      <Section>
+      <Section height={100} padding={20} paddingTop={"15dvh"}>
         <Presentation />
       </Section>
 
@@ -23,9 +25,9 @@ export default function App() {
         <About />
       </Section>
 
-      <Section>
+      {/* <Section>
         <Stacks />
-      </Section>
+      </Section> */}
 
       <Section>
         <Projects />
@@ -35,9 +37,7 @@ export default function App() {
         <ContactMe />
       </Section>
 
-      <Section>
-        <Footer />
-      </Section>
+      <Footer />
     </>
   );
 }

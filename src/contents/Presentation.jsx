@@ -1,5 +1,6 @@
+import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si";
+import Anchor from "@/components/Anchor";
 import { motion } from "framer-motion";
-import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
 const MotionDiv = motion.div;
 const MotionSpan = motion.span;
@@ -18,116 +19,119 @@ function Icon({ href, children }) {
 }
 
 export default function Presentation() {
-    const size = 25;
     const socialMedias = [
         { href: "https://instagram.com/eded.dev", icon: SiInstagram },
-        { href: "https://github.com/eded001", icon: SiGithub },
-        { href: "https://www.linkedin.com/in/edgar-augusto/", icon: SiLinkedin }
+        { href: "https://linkedin.com/in/edgar-augusto", icon: SiLinkedin },
+        { href: "https://github.com/eded001", icon: SiGithub }
     ];
 
-    return (
-        <div className="flex flex-wrap justify-between items-center w-full -z-1">
-            {/* Texto principal */}
-            <MotionDiv
-                initial="hidden"
-                animate="visible"
-                className="flex flex-col space-y-2"
-                variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1 }
-                }}
-            >
-                <div className="flex space-x-1">
-                    <MotionSpan
-                        className="text-2xl"
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: {
-                                opacity: 1,
-                                y: 0,
-                                transition: { duration: 0.8, delay: 0.5 }
-                            }
-                        }}
-                    >
-                        Hello,
-                    </MotionSpan>
+    const textVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: (i = 1) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.3,
+                type: "spring",
+                stiffness: 100,
+                damping: 12
+            }
+        })
+    };
 
-                    <MotionSpan
-                        className="text-2xl"
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: {
-                                opacity: 1,
-                                y: 0,
-                                transition: { duration: 0.8, delay: 1 }
-                            }
-                        }}
-                    >
-                        my name is
-                    </MotionSpan>
+    const nameVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 1, ease: "easeOut" }
+        }
+    };
+
+    const socialVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 3 + i * 0.2,
+                type: "spring",
+                stiffness: 120,
+                damping: 10
+            }
+        })
+    };
+
+    return (
+        <div className="flex flex-wrap items-center w-full justify-between">
+            <div className="flex flex-col space-y-4">
+                <div className="flex space-x-1">
+                    {["Hello,", "my name is"].map((text, index) => (
+                        <motion.div
+                            key={index}
+                            initial="hidden"
+                            animate="visible"
+                            variants={textVariants}
+                            custom={index + 1}
+                        >
+                            <span className="text-2xl">{text}</span>
+                        </motion.div>
+                    ))}
                 </div>
 
-                <MotionSpan
-                    className="text-8xl font-bold"
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: {
-                            opacity: 1,
-                            transition: { duration: 1.5, delay: 1.5 }
-                        }
-                    }}
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={textVariants}
+                    custom={3}
                 >
-                    Edgar Augusto
-                </MotionSpan>
+                    <span className="text-8xl font-bold">Edgar Augusto</span>
+                </motion.div>
 
-                <MotionSpan
-                    className="text-2xl pt-5"
-                    variants={{
-                        hidden: { opacity: 0, y: -20 },
-                        visible: {
-                            opacity: 1,
-                            y: 0,
-                            transition: { duration: 0.8, delay: 3 }
-                        }
-                    }}
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={textVariants}
+                    custom={4}
                 >
-                    Dev Full Stack | Dev Mobile | Aspiring Tech Lead
-                </MotionSpan>
-            </MotionDiv>
-
-            <div className="flex justify-center items-center flex-1 relative">
-                <MotionDiv
-                    className="font-mono absolute"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
-                >
-                    <span className="text-6xl font-bold">&lt;</span>
-                    <span className="text-8xl font-light">EA</span>
-                    <span className="text-6xl font-bold">/&gt;</span>
-                </MotionDiv>
-
-                <MotionDiv
-                    className="flex gap-5 absolute top-15 mb-5"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 3, ease: "easeOut" }}
-                >
-                    {
-                        socialMedias.map((media, index) => (
-                            <MotionDiv
-                                key={index}
-                                whileHover={{ scale: 1.5 }}
-                                whileTap={{ scale: 0.9 }}
-                            >
-                                <Icon href={media.href}>
-                                    <media.icon color={"#171717"} size={size} />
-                                </Icon>
-                            </MotionDiv>
-                        ))
-                    }
-                </MotionDiv>
+                    <span className="text-2xl pt-5">Dev Full Stack &bull; Dev Mobile</span>
+                </motion.div>
             </div>
+
+            <div className="flex flex-col items-center select-none relative">
+                <div className="w-75 relative z-10 flex justify-center">
+                    <MotionDiv
+                        initial={{ clipPath: "circle(0% at 50% 50%)" }} // começa invisível no centro
+                        animate={{ clipPath: "circle(50% at 50% 50%)" }} // revela até cobrir metade (ajuste conforme tamanho)
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        className="w-64 h-64 mask-radial-closest-side mask-radial-from-90% mask-radial-at-[50%_50%] bg-cover bg-center bg-[url(https://frogs.media/static/frog.png)]"
+                    />
+                </div>
+
+                <div className="absolute -bottom-8 flex space-x-5 z-0">
+                    {socialMedias.map(({ href, icon: Icon }, index) => (
+                        <MotionDiv
+                            key={index}
+                            initial={{ opacity: 0, y: -40, x: (index - 1) * 20, scale: 0.5 }} // <- começa acima da imagem
+                            animate={{ opacity: 1, y: 0, x: 0, scale: 1 }} // <- "desce" para a posição final
+                            transition={{
+                                type: "spring",
+                                stiffness: 120,
+                                damping: 12,
+                                delay: 2 + index * 0.2
+                            }}
+                            whileHover={{ scale: 1.5 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="relative"
+                        >
+                            <Anchor href={href} target="_blank">
+                                <Icon size={20} />
+                            </Anchor>
+                        </MotionDiv>
+                    ))}
+                </div>
+            </div>
+
         </div>
     );
 }

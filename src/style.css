@@ -119,7 +119,7 @@
   }
 }
 
-/* :root::selection {
+:root::selection {
   background: var(--primary);
   color: var(--primary-foreground);
-} */
+}

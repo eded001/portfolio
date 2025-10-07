@@ -58,12 +58,12 @@ export default function Projects() {
                     <p>Nenhum projeto para mostrar.</p>
                 ) : (
                     projects.map((project, idx) => (
-                        <Card key={idx} className="w-[300px] border border-gray-300">
+                        <Card key={idx} className="w-[300px] border">
                             <CardHeader>
                                 <CardTitle className="text-center">{project.title}</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-justify text-sm text-gray-700">
+                                <p className="text-justify text-sm">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-3">
