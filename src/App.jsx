@@ -17,11 +17,11 @@ export default function App() {
         <Header />
       </span>
 
-      <Section height={80} padding={100} paddingTop={"15dvh"}>
+      <Section padding={100} paddingTop={"15dvh"} id="home">
         <Presentation />
       </Section>
 
-      <Section>
+      <Section padding={50} id="about">
         <About />
       </Section>
 
@@ -29,11 +29,11 @@ export default function App() {
         <Stacks />
       </Section> */}
 
-      <Section>
+      <Section id="projects">
         <Projects />
       </Section>
 
-      <Section>
+      <Section id="contact">
         <ContactMe />
       </Section>
 

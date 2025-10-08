@@ -114,9 +114,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+h1 {
+  color: #171717;
+}
+
+p {
+  color: #262626;
 }
 
 :root::selection {
@@ -126,5 +135,4 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 30%;
 }

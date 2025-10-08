@@ -1,8 +1,9 @@
-export default function Section({ children, justify = "center", align = "center", padding = 5, height,backgroundColor = "transparent", paddingTop }) {
+export default function Section({ children, padding = 5, backgroundColor = "transparent", paddingTop = 0, id }) {
     return (
         <section
-        className={`min-h-[75dvh] flex justify-${justify} items-${align} border-b-2`}
-        style={{ backgroundColor: backgroundColor, paddingTop: paddingTop, height: height + "dvh", padding: padding }}
+            id={id}
+            className={`min-h-[100dvh] flex justify-center items-center`}
+            style={{ backgroundColor: backgroundColor, paddingTop: paddingTop, padding: padding, height: "auto" }}
         >
             {children}
         </section>

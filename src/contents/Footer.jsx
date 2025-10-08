@@ -1,6 +1,7 @@
 import Anchor from "@/components/Anchor";
 import { motion } from "framer-motion";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 export default function Footer() {
     const socialMedias = [
@@ -25,8 +26,8 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="h-[25dvh] flex flex-col justify-center p-2 text-center text-sm">
-            <p>Please, don't forget to follow me in my social</p>
+        <footer className="h-[25dvh] flex flex-col justify-center p-2 text-center text-base">
+            <p>Please, don't forget to follow me in my social medias</p>
 
             <ul className="flex justify-center space-x-5 my-2">
                 {socialMedias.map((social) => (
@@ -44,7 +45,9 @@ export default function Footer() {
                 ))}
             </ul>
 
-            <p>Made with <FaHeart color="#f00" className="inline-block" /> by <b className="font-mono">Edgar Augusto</b> with <b className="font-mono text-[#00D8FF]">React</b> and <b className="font-mono text-[#35BEF8]">TailwindCSS</b></p>
+            <p>
+                <b className="font-mono">&lt;Coded/&gt;</b> with <FaHeart color="#f00" className="inline-block" /> by <span className="font-semibold">$&#123;Ed&#125;</span> using <FaReact color="#00D8FF"  className="inline-block" /> and <RiTailwindCssFill color="#35BEF8" className="inline-block" />
+            </p>
         </footer>
     );
 }
