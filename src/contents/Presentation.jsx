@@ -140,15 +140,17 @@ export default function Presentation() {
                 </MotionDiv>
 
                 <div className="text-center">
-                    <motion.p
+                    <MotionDiv
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1 }}
                     >
-                        <b className="text-2xl">Currently</b> <br />
-                        <b className="font-medium">Technical Support Intern</b> at{" "}
-                        <b className="font-medium">SEMCULT</b>
-                    </motion.p>
+                        <b className="text-2xl border-b-2 border-zinc-500 pb-0.5">Currently</b>
+                        <p className="border-b-2 border-zinc-400">
+                            <b className="font-medium">Technical Support Intern</b> at{" "}
+                            <b className="font-medium"><abbr title="Secretaria Municipal de Cultura e Turismo de Belém" className="decoration-1">SEMCULT</abbr></b>
+                        </p>
+                    </MotionDiv>
                 </div>
             </div>
         </div>

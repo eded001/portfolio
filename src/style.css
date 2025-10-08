@@ -136,3 +136,12 @@ p {
 html {
   scroll-behavior: smooth;
 }
+
+.bg-zoom {
+  background-size: 100%;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.bg-zoom:hover {
+  background-size: 115%;
+}

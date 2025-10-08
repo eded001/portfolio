@@ -7,9 +7,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 // images
-import { aleitamentoMaterno, calopAgender, duckManager } from "@/imgs/share";
+import { aleitamentoMaterno, calopAgender, duckManager, helpNow, me } from "@/imgs/share";
+import { useBg } from "@/hooks/useBg";
 
 export default function Projects() {
+    const bgColor = useBg(me);
+    console.log(bgColor);
+
     const projects = [
         {
             title: "Duck Manager",
@@ -51,10 +55,10 @@ export default function Projects() {
                         className="text-blue-500 hover:underline inline-flex items-center"
                     >
                         SEMCULT <LuExternalLink className="ml-1 h-4 w-4" />
-                    </a> (Secretaria Municipal de Cultura e Turismo - Municipal Department of Culture and Tourism). Includes authentication, real-time communication via WebSocket, and persistence with Prisma and SQLite.
+                    </a> (Secretaria Municipal de Cultura e Turismo de Belém - Municipal Department of Culture and Tourism of Belém). Includes authentication, real-time communication via WebSocket, and persistence with Prisma and SQLite.
                 </>
             ),
-            print: "https://frogs.media/static/frog.png",
+            print: helpNow,
             link: "http://github.com/semcult-belem/central-chamados",
             stacks: ["HTML", "CSS", "JS", "SQLite", "Express", "Prisma", "WebSocket"],
         },
@@ -68,17 +72,28 @@ export default function Projects() {
                 {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                         {projects.map((project, idx) => (
-                            <Card key={idx} className="border rounded-xl overflow-hidden">
-                                <CardHeader className="flex flex-col items-center justify-center h-[300px]">
+                            <Card key={idx} className="bg-zinc-200 border-zinc-300 border">
+                                <CardHeader className="relative flex flex-col items-center justify-center h-[300px] overflow-hidden rounded-xl">
+                                    {/* fundo  */}
                                     <span
-                                        className="block rounded-xl h-[100%] w-[100%] bg-center bg-size-[125%] hover:bg-size-[115%] bg-no-repeat transition-all duration-400 ease"
+                                        className="absolute inset-0 bg-center bg-cover scale-110 blur-sm"
                                         style={{ backgroundImage: `url(${project.print})` }}
                                     />
-                                    <CardTitle className="text-center mt-4">{project.title}</CardTitle>
-                                    <CardDescription className="text-center">{project.type}</CardDescription>
+
+                                    {/* imagem */}
+                                    <div className="relative w-full h-full">
+                                        <span
+                                            className="absolute inset-0 rounded-sm bg-center bg-cover bg-no-repeat transition-transform duration-500 ease-in-out scale-80 hover:scale-70"
+                                            style={{ backgroundImage: `url(${project.print})` }}
+                                        />
+                                    </div>
+
                                 </CardHeader>
 
                                 <CardContent>
+                                    <CardTitle className="text-center mt-4">{project.title}</CardTitle>
+                                    <CardDescription className="text-center">{project.type}</CardDescription>
+
                                     <p className="text-justify text-sm">{project.description}</p>
                                     <div className="flex flex-wrap gap-2 mt-3">
                                         {project.stacks.map((stack, i) => (
