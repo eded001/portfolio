@@ -5,7 +5,6 @@ import Section from '@/components/Section';
 import Header from '@/contents/Header';
 import Presentation from '@/contents/Presentation';
 import About from '@/contents/About';
-import Stacks from '@/contents/Stacks';
 import Projects from '@/contents/Projects';
 import ContactMe from '@/contents/ContactMe';
 import Footer from '@/contents/Footer';
@@ -18,27 +17,23 @@ export default function App() {
         <Header />
       </span>
 
-      <Section padding={100} paddingTop={"15dvh"} id="home">
+      <Section id="home" padding={100} paddingTop={"15dvh"}>
         <Presentation />
       </Section>
 
-      <Section padding={50} id="about">
+      <Section id="about" padding={50}>
         <About />
       </Section>
 
-      <Section>
+      <Section id="expertise" height={80}>
         <Expertise />
       </Section>
-
-      {/* <Section>
-        <Stacks />
-      </Section> */}
 
       <Section id="projects">
         <Projects />
       </Section>
 
-      <Section id="contact">
+      <Section id="contact" height={70}>
         <ContactMe />
       </Section>
 

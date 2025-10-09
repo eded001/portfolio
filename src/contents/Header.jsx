@@ -10,10 +10,10 @@ import { useEffect, useState } from "react";
 export default function Header() {
     const sections = [
         { name: "About", href: "#about" },
-        { name: "Expertise", href: "#expertise" },
+        { name: "Expertises", href: "#expertise" },
         { name: "Skills", href: "#skills" },
         { name: "Projects", href: "#projects" },
-        { name: "Contact", href: "#contact" }
+        { name: "Contact", href: "#contact" },
     ];
 
     const items = [

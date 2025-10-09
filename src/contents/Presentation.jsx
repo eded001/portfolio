@@ -146,7 +146,7 @@ export default function Presentation() {
                         transition={{ delay: 1 }}
                     >
                         <b className="text-2xl border-b-2 border-zinc-500 pb-0.5">Currently</b>
-                        <p className="border-b-2 border-zinc-400">
+                        <p className="border-b-4 border-zinc-400">
                             <b className="font-medium">Technical Support Intern</b> at{" "}
                             <b className="font-medium"><abbr title="Secretaria Municipal de Cultura e Turismo de Belém" className="decoration-1">SEMCULT</abbr></b>
                         </p>
