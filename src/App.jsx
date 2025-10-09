@@ -1,14 +1,15 @@
 // components
-import Section from './components/Section';
+import Section from '@/components/Section';
 
 // sections
-import Header from './contents/Header';
-import Presentation from './contents/Presentation';
-import About from './contents/About';
-import Stacks from './contents/Stacks';
-import Projects from './contents/Projects';
-import ContactMe from './contents/ContactMe';
-import Footer from './contents/Footer';
+import Header from '@/contents/Header';
+import Presentation from '@/contents/Presentation';
+import About from '@/contents/About';
+import Stacks from '@/contents/Stacks';
+import Projects from '@/contents/Projects';
+import ContactMe from '@/contents/ContactMe';
+import Footer from '@/contents/Footer';
+import Expertise from '@/contents/Expertise';
 
 export default function App() {
   return (
@@ -23,6 +24,10 @@ export default function App() {
 
       <Section padding={50} id="about">
         <About />
+      </Section>
+
+      <Section>
+        <Expertise />
       </Section>
 
       {/* <Section>

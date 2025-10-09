@@ -8,12 +8,8 @@ import { Button } from "@/components/ui/button";
 
 // images
 import { aleitamentoMaterno, calopAgender, duckManager, helpNow, me } from "@/imgs/share";
-import { useBg } from "@/hooks/useBg";
 
 export default function Projects() {
-    const bgColor = useBg(me);
-    console.log(bgColor);
-
     const projects = [
         {
             title: "Duck Manager",
@@ -69,50 +65,45 @@ export default function Projects() {
             <Title>Projects</Title>
 
             <div className="flex flex-wrap gap-4 justify-center">
-                {
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-                        {projects.map((project, idx) => (
-                            <Card key={idx} className="bg-zinc-200 border-zinc-300 border">
-                                <CardHeader className="relative flex flex-col items-center justify-center h-[300px] overflow-hidden rounded-xl">
-                                    {/* fundo  */}
-                                    <span
-                                        className="absolute inset-0 bg-center bg-cover scale-110 blur-sm"
-                                        style={{ backgroundImage: `url(${project.print})` }}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    {projects.map((project, id) => (
+                        <Card key={id} className="bg-zinc-200 border-zinc-300 border">
+                            <CardHeader className="relative flex flex-col items-center justify-center h-75 overflow-hidden rounded-xl">
+                                <span
+                                    className="absolute inset-0 bg-center bg-cover scale-110 blur-sm"
+                                    style={{ backgroundImage: `url(${project.print})` }}
+                                />
+                                <div className="relative aspect-[16/9] overflow-hidden ">
+                                    <img
+                                        src={project.print}
+                                        alt={project.title}
+                                        className="object-center w-full h-full rounded-sm"
                                     />
+                                </div>
+                            </CardHeader>
 
-                                    {/* imagem */}
-                                    <div className="relative w-full h-full">
-                                        <span
-                                            className="absolute inset-0 rounded-sm bg-center bg-cover bg-no-repeat transition-transform duration-500 ease-in-out scale-80 hover:scale-70"
-                                            style={{ backgroundImage: `url(${project.print})` }}
-                                        />
-                                    </div>
+                            <CardContent>
+                                <CardTitle className="text-center mt-4">{project.title}</CardTitle>
+                                <CardDescription className="text-center">{project.type}</CardDescription>
 
-                                </CardHeader>
+                                <p className="text-justify text-sm">{project.description}</p>
+                                <div className="flex flex-wrap gap-2 mt-3">
+                                    {project.stacks.map((stack, i) => (
+                                        <Badge key={i} className="select-none bg-neutral-600">{stack}</Badge>
+                                    ))}
+                                </div>
+                            </CardContent>
 
-                                <CardContent>
-                                    <CardTitle className="text-center mt-4">{project.title}</CardTitle>
-                                    <CardDescription className="text-center">{project.type}</CardDescription>
-
-                                    <p className="text-justify text-sm">{project.description}</p>
-                                    <div className="flex flex-wrap gap-2 mt-3">
-                                        {project.stacks.map((stack, i) => (
-                                            <Badge key={i} className="select-none bg-neutral-600">{stack}</Badge>
-                                        ))}
-                                    </div>
-                                </CardContent>
-
-                                <CardFooter className="flex justify-center gap-2">
-                                    <Button asChild size="sm" className="bg-neutral-300 text-neutral-600 hover:bg-neutral-200 hover:text-neutral-500">
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                            See more <LuExternalLink className="ml-1 h-4 w-4" />
-                                        </a>
-                                    </Button>
-                                </CardFooter>
-                            </Card>
-                        ))}
-                    </div>
-                }
+                            <CardFooter className="flex justify-center gap-2">
+                                <Button asChild size="sm" className="bg-neutral-400 text-neutral-600 hover:bg-neutral-300 hover:text-neutral-500">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                        See more <LuExternalLink className="ml-1 h-4 w-4" />
+                                    </a>
+                                </Button>
+                            </CardFooter>
+                        </Card>
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import Title from "@/components/Title";
 import { Button } from "@/components/ui/button";
-import { IoSend } from "react-icons/io5";
+import { IoIosMail } from "react-icons/io";
 import { SiLinkedin } from "react-icons/si";
 
 export default function ContactMe() {
@@ -15,13 +15,13 @@ export default function ContactMe() {
 
             <div className="flex gap-5 items-center">
                 <Button asChild variant={"secondary"} className={"bg-blue-300 text-blue-600 hover:bg-blue-200 hover:text-blue-500"}>
-                    <a href="https://www.linkedin.com/in/edgar-augusto/" target="_blank">Connect on LinkedIn <SiLinkedin /></a>
+                    <a href="https://www.linkedin.com/in/edgar-augusto/" target="_blank">Press to go at <SiLinkedin /></a>
                 </Button>
 
                 <p>or</p>
 
-                <Button asChild className={"bg-sky-300 text-sky-600 hover:bg-sky-200 hover:text-sky-500"}>
-                    <a href="mailto:edgarams.profissional@gmail.com" target="_blank">Send an email <IoSend /></a>
+                <Button asChild className={"bg-red-300 text-red-600 hover:bg-red-200 hover:text-red-500"}>
+                    <a href="mailto:edgarams.profissional@gmail.com" target="_blank">Press to email me <IoIosMail /></a>
                 </Button>
             </div>
         </div>
