@@ -6,7 +6,7 @@ import Header from '@/contents/Header';
 
 import Presentation from '@/contents/Presentation';
 import About from '@/contents/About';
-import Expertise from '@/contents/Expertise';
+import Skills from '@/contents/Skills';
 import Stacks from '@/contents/Stacks'
 import Projects from '@/contents/Projects';
 import ContactMe from '@/contents/ContactMe';
@@ -28,8 +28,8 @@ export default function App() {
         <About />
       </Section>
 
-      <Section id="expertise">
-        <Expertise />
+      <Section id="skills">
+        <Skills />
       </Section>
 
       <Section id="stacks">

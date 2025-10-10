@@ -5,8 +5,8 @@ import { RiTeamLine } from "react-icons/ri";
 import { LuBrain } from "react-icons/lu";
 import { ImMobile } from "react-icons/im";
 
-export default function Expertise() {
-    const expertises = [
+export default function Skills() {
+    const skills = [
         {
             title: "Full Stack Development",
             description: "I design and develop complete applications, combining solid front-end experiences with robust back-end architectures. My focus is on performance, scalability, clean code, and seamless integration between APIs and SQL/NoSQL databases.",
@@ -31,12 +31,12 @@ export default function Expertise() {
 
     return (
         <div className="space-y-6">
-            <Title>Expertises</Title>
+            <Title>Skills</Title>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                 {
                     // eslint-disable-next-line no-unused-vars
-                    expertises.map(({ icon: Icon, title, description }, index) => (
+                    skills.map(({ icon: Icon, title, description }, index) => (
                         <Card key={index} className="border-1 bg-zinc-400 h-60 w-75">
                             <CardHeader className={"flex flex-row items-center bg-zinc-600 rounded-t-lg border-b-2 border-zinc-400 pl-2 pt-2 pb-2 text-xl"}>
                                 <Icon size={40} className="text-zinc-100" />

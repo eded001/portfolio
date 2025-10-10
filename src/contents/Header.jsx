@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export default function Header() {
     const sections = [
         { name: "About", href: "#about" },
-        { name: "Expertises", href: "#expertise" },
+        { name: "Skills", href: "#skills" },
         { name: "Stacks", href: "#stacks" },
         { name: "Projects", href: "#projects" },
         { name: "Contact", href: "#contact" },
@@ -53,7 +53,7 @@ export default function Header() {
                 <p className="text-zinc-800">Edgar Augusto</p>
             </a>
 
-            <nav className="flex space-x-5 items-center">
+            <nav className="flex space-x-5 items-center max-md:hidden max-sm:hidden">
                 <ul className="flex space-x-2">
                     {sections.map(section => (
                         <li key={section.name} className="text-zinc-700 hover:text-zinc-500">

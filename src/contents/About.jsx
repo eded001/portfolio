@@ -11,11 +11,11 @@ export default function About() {
             <div className="flex flex-col space-y-5 text-justify">
                 <Title>A little bit of me</Title>
 
-                <p className="text-xl leading-relaxed">
-                    I'm a junior full stack developer with solid expertise in JavaScript and React, and hands-on experience in mobile development with React Native. I'm passionate about technology, leadership, and solving real-world problems — always eager to take on new challenges and keep growing.
+                <p className="text-xl">
+                    I'm a junior full stack developer with solid expertise in JavaScript and a little bit with React, and hands-on experience in mobile development with React Native. I'm passionate about technology, leadership, and solving real-world problems — always eager to take on new challenges and keep growing.
                 </p>
 
-                <p className="text-xl leading-relaxed">
+                <p className="text-xl">
                     When I’m not coding, you’ll find me acting, writing, or exploring the world of music and musicians.
                 </p>
             </div>
