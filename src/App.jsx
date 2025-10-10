@@ -28,7 +28,7 @@ export default function App() {
         <About />
       </Section>
 
-      <Section id="expertise" height={80}>
+      <Section id="expertise">
         <Expertise />
       </Section>
 
@@ -40,7 +40,7 @@ export default function App() {
         <Projects />
       </Section>
 
-      <Section id="contact" height={70}>
+      <Section id="contact" height={90}>
         <ContactMe />
       </Section>
 

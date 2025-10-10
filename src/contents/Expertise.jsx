@@ -8,12 +8,12 @@ import { ImMobile } from "react-icons/im";
 export default function Expertise() {
     const expertises = [
         {
-            title: "Full Stack Dev",
+            title: "Full Stack Development",
             description: "I design and develop complete applications, combining solid front-end experiences with robust back-end architectures. My focus is on performance, scalability, clean code, and seamless integration between APIs and SQL/NoSQL databases.",
             icon: FaCode
         },
         {
-            title: "Mobile Dev",
+            title: "Mobile Development",
             description: "I build modern, high-performance apps with responsive design and smooth navigation. I prioritize user experience, consistent UI patterns, and efficient integration with APIs and back-end systems.",
             icon: ImMobile
         },
