@@ -30,14 +30,14 @@ export default function Skills() {
     ];
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-6 max-sm:p-5">
             <Title>Skills</Title>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                 {
                     // eslint-disable-next-line no-unused-vars
                     skills.map(({ icon: Icon, title, description }, index) => (
-                        <Card key={index} className="border-1 bg-zinc-400 h-60 w-75">
+                        <Card key={index} className="border-1 bg-zinc-400 h-60 w-75 max-sm:w-full">
                             <CardHeader className={"flex flex-row items-center bg-zinc-600 rounded-t-lg border-b-2 border-zinc-400 pl-2 pt-2 pb-2 text-xl"}>
                                 <Icon size={40} className="text-zinc-100" />
                                 <CardTitle className="font-bold text-zinc-300">{title}</CardTitle>

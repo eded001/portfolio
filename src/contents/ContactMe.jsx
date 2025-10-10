@@ -5,11 +5,11 @@ import { SiLinkedin } from "react-icons/si";
 
 export default function ContactMe() {
     return (
-        <div className="grid place-items-center gap-10 text-center px-4">
-            <Title>Are you interested? <br></br> Contact me!</Title>
+        <div className="flex items-center justify-center flex-col gap-10 text-center px-4 h-[90vh] max-sm:p-5">
+            <Title>Are you interested? <br /> Contact me!</Title>
 
-            <p className="max-w-xl">
-                I love exploring new opportunities and partnerships. <br></br>
+            <p className="max-w-xl max-sm:text-lg">
+                I love exploring new opportunities and partnerships. <br />
                 If you have any project ideas or questions, feel free to contact me.
             </p>
 

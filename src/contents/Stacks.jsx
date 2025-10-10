@@ -62,7 +62,7 @@ export default function TechStack() {
     ));
 
   return (
-    <div className="space-y-6 w-full p-20">
+    <div className="space-y-6 w-full p-20 max-sm:p-5">
       <div className="space-y-2">
         <Title>Stacks</Title>
         <Subtitle>I can get ideas off the ground using...</Subtitle>
@@ -71,14 +71,14 @@ export default function TechStack() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <section className="space-y-3">
           <h3 className="text-lg font-semibold text-center border-b pb-1">Front-End</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
             {renderStack("frontEnd")}
           </div>
         </section>
 
         <section className="space-y-3">
           <h3 className="text-lg font-semibold text-center border-b pb-1">Back-End</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
             {renderStack("backEnd")}
           </div>
         </section>
@@ -86,7 +86,7 @@ export default function TechStack() {
 
       <div className="space-y-3">
         <h3 className="text-lg font-semibold text-center border-b pb-1">Others</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
           {renderStack("others")}
         </div>
       </div>

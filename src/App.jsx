@@ -15,16 +15,16 @@ import Footer from '@/contents/Footer';
 
 export default function App() {
   return (
-    <>
+    <span className="relative min-h-screen">
       <span className="flex justify-center">
         <Header />
       </span>
 
-      <Section id="home" padding={100}>
+      <Section id="home">
         <Presentation />
       </Section>
 
-      <Section id="about" padding={50}>
+      <Section id="about">
         <About />
       </Section>
 
@@ -40,11 +40,11 @@ export default function App() {
         <Projects />
       </Section>
 
-      <Section id="contact" height={90}>
+      <Section id="contact">
         <ContactMe />
       </Section>
 
       <Footer />
-    </>
+    </span>
   );
 }

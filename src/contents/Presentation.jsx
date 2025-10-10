@@ -45,8 +45,8 @@ export default function Presentation() {
     };
 
     return (
-        <div className="flex flex-wrap items-center w-full justify-between relative">
-            <div className="flex flex-col space-y-4">
+        <div className="flex flex-wrap items-center w-full justify-between relative p-100 max-sm:p-4 max-sm:justify-center max-sm:space-y-10">
+            <div className="flex flex-col space-y-4 max-sm:space-y-2">
                 <div className="flex space-x-1">
                     {["Hello,", "my name is"].map((text, index) => (
                         <motion.div
@@ -56,7 +56,7 @@ export default function Presentation() {
                             variants={textVariants}
                             custom={index + 1}
                         >
-                            <span className="text-2xl">{text}</span>
+                            <span className="text-2xl max-sm:text-xl">{text}</span>
                         </motion.div>
                     ))}
                 </div>
@@ -68,7 +68,7 @@ export default function Presentation() {
                     custom={3}
                     className="flex flex-col gap-4"
                 >
-                    <h1 className="text-8xl font-bold">Edgar Augusto</h1>
+                    <h1 className="text-8xl font-bold max-sm:text-4xl">Edgar Augusto</h1>
                 </motion.div>
 
                 <motion.div
@@ -81,7 +81,7 @@ export default function Presentation() {
                         damping: 12,
                     }}
                 >
-                    <h2 className="text-2xl font-light text-zinc-700">aka Ed</h2>
+                    <h2 className="text-2xl font-light text-zinc-700 max-sm:text-xl">aka Ed</h2>
                 </motion.div>
 
                 <motion.div
@@ -90,7 +90,7 @@ export default function Presentation() {
                     variants={textVariants}
                     custom={4}
                 >
-                    <h2 className="text-2xl mt-5">
+                    <h2 className="text-2xl mt-5 max-sm:hidden">
                         <Typewriter
                             onInit={(typewriter) => {
                                 typewriter
@@ -131,12 +131,10 @@ export default function Presentation() {
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 150, damping: 15 }}
                     >
-                        {userPhoto && (
-                            <img
-                                src={userPhoto}
-                                className="rounded-full w-full shadow-xl"
-                            />
-                        )}
+                        <img
+                            src={userPhoto}
+                            className="rounded-full w-full shadow-xl"
+                        />
                     </MotionDiv>
                 </MotionDiv>
 

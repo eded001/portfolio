@@ -47,14 +47,14 @@ export default function Header() {
     const { icon, color, link } = items[current];
 
     return (
-        <div className="top-0 fixed flex justify-between min-h-[10dvh] w-full px-10 py-5 backdrop-blur-md backdrop-invert-5 backdrop-grayscale-30 z-20">
+        <div className="top-0 fixed flex justify-between min-h-[10vh] w-full px-10 py-5 backdrop-blur-md backdrop-invert-5 backdrop-grayscale-30 z-20 max-sm:px-5">
             <a href="#home" className="flex space-x-1 items-center text-2xl">
                 <Logo />
                 <p className="text-zinc-800">Edgar Augusto</p>
             </a>
 
-            <nav className="flex space-x-5 items-center max-md:hidden max-sm:hidden">
-                <ul className="flex space-x-2">
+            <nav className="flex space-x-5 items-center ">
+                <ul className="flex space-x-2 max-md:hidden max-sm:hidden">
                     {sections.map(section => (
                         <li key={section.name} className="text-zinc-700 hover:text-zinc-500">
                             <Anchor href={section.href} target="_self">
