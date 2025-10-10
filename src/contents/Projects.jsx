@@ -31,7 +31,7 @@ export default function Projects() {
         },
         {
             title: "Breastfeeding Informative",
-            type: "Application Web - Static Front End",
+            type: "Application Web - Static Front-End",
             description:
                 "Freelance informational website with a focus on accessibility and clean design, dedicated to raising awareness and disseminating information about breastfeeding.",
             print: aleitamentoMaterno,
@@ -48,7 +48,7 @@ export default function Projects() {
                         href="https://semcult.belem.pa.gov.br/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline inline-flex items-center"
+                        className="text-zinc-600 hover:underline inline-flex items-center"
                     >
                         SEMCULT <LuExternalLink className="ml-1 h-4 w-4" />
                     </a> (Secretaria Municipal de Cultura e Turismo de Belém - Municipal Department of Culture and Tourism of Belém). Includes authentication, real-time communication via WebSocket, and persistence with Prisma and SQLite.
@@ -86,7 +86,7 @@ export default function Projects() {
                                 <CardTitle className="font-bold text-zinc-800 text-center text-2xl mt-1">{project.title}</CardTitle>
                                 <CardDescription className="font-medium text-zinc-700 text-center mb-2">{project.type}</CardDescription>
 
-                                <p className="text-justify text-sm">{project.description}</p>
+                                <p className="text-justify text-sm text-zinc-500">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mt-3">
                                     {project.stacks.map((stack, i) => (
                                         <Badge key={i} className="select-none bg-neutral-600">{stack}</Badge>

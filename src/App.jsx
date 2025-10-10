@@ -3,12 +3,15 @@ import Section from '@/components/Section';
 
 // sections
 import Header from '@/contents/Header';
+
 import Presentation from '@/contents/Presentation';
 import About from '@/contents/About';
+import Expertise from '@/contents/Expertise';
+import Stacks from '@/contents/Stacks'
 import Projects from '@/contents/Projects';
 import ContactMe from '@/contents/ContactMe';
+
 import Footer from '@/contents/Footer';
-import Expertise from '@/contents/Expertise';
 
 export default function App() {
   return (
@@ -17,7 +20,7 @@ export default function App() {
         <Header />
       </span>
 
-      <Section id="home" padding={100} paddingTop={"15dvh"}>
+      <Section id="home" padding={100}>
         <Presentation />
       </Section>
 
@@ -27,6 +30,10 @@ export default function App() {
 
       <Section id="expertise" height={80}>
         <Expertise />
+      </Section>
+
+      <Section id="stacks">
+        <Stacks />
       </Section>
 
       <Section id="projects">

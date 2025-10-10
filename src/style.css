@@ -120,14 +120,6 @@
   }
 }
 
-h1 {
-  color: #171717;
-}
-
-p {
-  color: #262626;
-}
-
 :root::selection {
   background: var(--primary);
   color: var(--primary-foreground);
@@ -137,6 +129,20 @@ html {
   scroll-behavior: smooth;
 }
 
-img {
-  user-select: none;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient45 {
+  animation: gradient 8s ease-in-out infinite;
 }

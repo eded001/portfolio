@@ -11,7 +11,7 @@ export default function Header() {
     const sections = [
         { name: "About", href: "#about" },
         { name: "Expertises", href: "#expertise" },
-        { name: "Skills", href: "#skills" },
+        { name: "Stacks", href: "#stacks" },
         { name: "Projects", href: "#projects" },
         { name: "Contact", href: "#contact" },
     ];
@@ -29,7 +29,7 @@ export default function Header() {
         },
         {
             icon: <SiGithub />,
-            color: "bg-gray-200 text-gray-800 hover:bg-gray-300 hover:text-black",
+            color: "bg-zinc-200 text-zinc-800 hover:bg-zinc-300 hover:text-black",
             link: "https://github.com/eded.dev"
         }
     ];

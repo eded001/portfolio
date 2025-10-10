@@ -14,7 +14,7 @@ export default function Expertise() {
         },
         {
             title: "Mobile Dev",
-            description: "I build modern, high-performance apps with responsive design and smooth navigation. I prioritize user experience, consistent UI patterns, and efficient integration with APIs and backend systems.",
+            description: "I build modern, high-performance apps with responsive design and smooth navigation. I prioritize user experience, consistent UI patterns, and efficient integration with APIs and back-end systems.",
             icon: ImMobile
         },
         {
@@ -38,12 +38,12 @@ export default function Expertise() {
                     // eslint-disable-next-line no-unused-vars
                     expertises.map(({ icon: Icon, title, description }, index) => (
                         <Card key={index} className="border-1 bg-zinc-400 h-60 w-75">
-                            <CardHeader className={"flex flex-row items-center justify-start text-zinc-800 border-b-2 border-zinc-500 pl-2 pt-2 pb-2 text-xl"}>
-                                <Icon size={40} className="text-zinc-900" />
-                                <CardTitle className="font-bold">{title}</CardTitle>
+                            <CardHeader className={"flex flex-row items-center bg-zinc-600 rounded-t-lg border-b-2 border-zinc-400 pl-2 pt-2 pb-2 text-xl"}>
+                                <Icon size={40} className="text-zinc-100" />
+                                <CardTitle className="font-bold text-zinc-300">{title}</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <CardDescription className="text-zinc-700 font-medium">{description}</CardDescription>
+                                <CardDescription className="text-zinc-700 font-medium text-justify">{description}</CardDescription>
                             </CardContent>
                         </Card>
                     ))

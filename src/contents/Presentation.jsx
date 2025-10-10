@@ -1,3 +1,4 @@
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
@@ -80,7 +81,7 @@ export default function Presentation() {
                         damping: 12,
                     }}
                 >
-                    <h2 className="text-2xl font-light text-gray-700">aka Ed</h2>
+                    <h2 className="text-2xl font-light text-zinc-700">aka Ed</h2>
                 </motion.div>
 
                 <motion.div
@@ -119,7 +120,7 @@ export default function Presentation() {
                 </motion.div>
             </div>
 
-            <div className="flex flex-col items-center select-none relative">
+            <div className="flex flex-col items-center relative">
                 <MotionDiv
                     className="w-75 relative z-10 flex justify-center"
                     variants={imageVariants}
@@ -145,10 +146,17 @@ export default function Presentation() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1 }}
                     >
-                        <b className="text-2xl border-b-2 border-zinc-500 pb-0.5">Currently</b>
-                        <p className="border-b-4 border-zinc-400">
+                        <b className="text-2xl text-zinc-800">Currently</b>
+                        <p className="text-zinc-700">
                             <b className="font-medium">Technical Support Intern</b> at{" "}
-                            <b className="font-medium"><abbr title="Secretaria Municipal de Cultura e Turismo de Belém" className="decoration-1">SEMCULT</abbr></b>
+                            <Tooltip className="font-medium">
+                                <TooltipTrigger className="decoration-1">
+                                    <b className="font-medium">SEMCULT</b>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>Secretaria Municipal de Cultura e Turismo de Belém</p>
+                                </TooltipContent>
+                            </Tooltip>
                         </p>
                     </MotionDiv>
                 </div>
