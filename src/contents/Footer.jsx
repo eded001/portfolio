@@ -29,9 +29,11 @@ export default function Footer() {
         <footer className="flex flex-col justify-center text-center text-base bg-zinc-200 rounded-t-2xl
         max-lg:px-5
         ">
-            <p>Please, don't forget to follow me in my social medias</p>
+            <p className="max-lg:hidden">Please, don't forget to follow me in my social medias</p>
 
-            <ul className="flex justify-center space-x-5 my-2">
+            <ul className="flex justify-center space-x-5 my-2
+            max-lg:hidden
+            ">
                 {socialMedias.map((social) => (
                     <motion.li
                         key={social.name}
@@ -48,7 +50,7 @@ export default function Footer() {
             </ul>
 
             <p>
-                <b className="font-mono">&lt;Coded/&gt;</b> with <FaHeart color="#f00" className="inline-block" /> by <span className="font-semibold">$&#123;Ed&#125;</span> using <FaReact color="#00D8FF"  className="inline-block" /> and <RiTailwindCssFill color="#35BEF8" className="inline-block" />
+                <b className="font-mono">&lt;Coded/&gt;</b> with <FaHeart color="#f00" className="inline-block" /> by <span className="font-semibold">$&#123;Ed&#125;</span> using <FaReact color="#00D8FF" className="inline-block" /> and <RiTailwindCssFill color="#35BEF8" className="inline-block" />
             </p>
         </footer>
     );
