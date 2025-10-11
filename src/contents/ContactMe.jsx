@@ -9,7 +9,9 @@ export default function ContactMe() {
         max-sm:p-5
         max-lg:px-5
         ">
-            <h1 className="text-4xl font-bold text-zinc-900 max-lg:text-5xl">Are you interested? <br /> Contact me!</h1>
+            <h1 className="text-4xl font-bold text-zinc-900
+            max-lg:text-4xl
+            ">Are you interested? <br /> Contact me!</h1>
 
             <p className="max-w-xl
             max-sm:text-lg
@@ -19,7 +21,7 @@ export default function ContactMe() {
                 If you have any project ideas or questions, feel free to contact me.
             </p>
 
-            <div className="flex gap-5 items-center *:max-lg:text-xl">
+            <div className="flex gap-5 items-center">
                 <Button asChild variant={"secondary"} className="bg-blue-300 text-blue-600 hover:bg-blue-200 hover:text-blue-500">
                     <a href="https://www.linkedin.com/in/edgar-augusto/" target="_blank">Press to go at <SiLinkedin /></a>
                 </Button>
