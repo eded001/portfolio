@@ -5,8 +5,8 @@ import { SiLinkedin } from "react-icons/si";
 
 export default function ContactMe() {
     return (
-        <div className="flex items-center justify-center flex-col gap-10 text-center px-4 h-[100vh]
-        max-sm:p-5
+        <div className="flex items-center justify-center flex-col gap-10 text-center h-[100vh]
+        max-sm:px-5
         max-lg:px-5
         ">
             <h1 className="text-4xl font-bold text-zinc-900

@@ -47,7 +47,7 @@ export default function Header() {
     const { icon, color, link } = items[current];
 
     return (
-        <div className="top-0 fixed flex justify-between min-h-[10vh] w-full px-10 py-5 backdrop-blur-md backdrop-invert-5 backdrop-grayscale-30 z-20 max-sm:px-5">
+        <div className="fixed top-0 flex justify-between min-h-[10vh] w-full px-10 py-5 backdrop-blur-md backdrop-invert-5 backdrop-grayscale-30 z-20 max-sm:px-5">
             <a href="#home" className="flex space-x-1 items-center text-2xl">
                 <Logo />
                 <p className="text-zinc-800">Edgar Augusto</p>
