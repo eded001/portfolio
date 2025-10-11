@@ -36,6 +36,7 @@
     "rgbaster": "^2.1.1",
     "simple-icons": "^15.15.0",
     "tailwind-merge": "^3.3.1",
+    "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.1.14",
     "typewriter-effect": "^2.22.0",
     "vibrant": "^0.0.1"

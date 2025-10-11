@@ -10,7 +10,7 @@ export default function Presentation() {
             <div className="flex flex-col space-y-4
             max-sm:space-y-2
             ">
-                <p className="text-2xl
+                <p className="text-2xl text-zinc-800
                 max-sm:text-xl
                 max-lg:text-2xl
                 ">Hello my name is</p>
@@ -26,26 +26,30 @@ export default function Presentation() {
                 ">aka Ed</h2>
 
                 <div>
-                    <h2 className="text-2xl mt-5
+                    <h2 className="flex text-2xl mt-5 text-zinc-800
                     max-sm:hidden
                     max-lg:text-2xl
                     ">
                         <Typewriter
                             onInit={(typewriter) => {
                                 typewriter
-                                    .typeString("Dev ")
-                                    .pauseFor(1000)
-                                    .typeString("full stack")
+                                    .typeString("I'm dev")
+                                    .pauseFor(1500)
+                                    .typeString(" front-end")
                                     .pauseFor(1500)
                                     .deleteChars(10)
-                                    .pauseFor(500)
-                                    .typeString("mobile")
+                                    .typeString(" back-end")
                                     .pauseFor(1500)
-                                    .deleteChars(6)
-                                    .pauseFor(500)
-                                    .typeString("desktop")
-                                    .pauseFor(1000)
-                                    .start();
+                                    .deleteChars(9)
+                                    .typeString(" mobile")
+                                    .pauseFor(1500)
+                                    .deleteChars(7)
+                                    .typeString(" desktop")
+                                    .pauseFor(1500)
+                                    .deleteChars(8)
+                                    .typeString(" full stack")
+                                    .pauseFor(1500)
+                                    .start()
                             }}
                             options={{
                                 delay: 75,
@@ -72,12 +76,12 @@ export default function Presentation() {
                 <div className="text-center">
                     <b className="text-2xl text-zinc-800">Currently</b>
                     <p className="text-zinc-700">
-                        <b className="font-medium">Technical Support Intern</b> at{" "}
+                        <span className="font-medium">IT technical support</span> at{" "}
                         <Tooltip className="font-medium">
-                            <TooltipTrigger className="decoration-1">
-                                <b className="font-medium">SEMCULT</b>
+                            <TooltipTrigger>
+                                <span className="font-medium">SEMCULT</span>
                             </TooltipTrigger>
-                            <TooltipContent>
+                            <TooltipContent className="bg-zinc-900">
                                 <p>Secretaria Municipal de Cultura e Turismo de Belém</p>
                             </TooltipContent>
                         </Tooltip>

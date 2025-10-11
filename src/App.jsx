@@ -15,7 +15,7 @@ import Footer from '@/contents/Footer';
 
 export default function App() {
   return (
-    <span className="relative min-h-screen">
+    <>
       <span className="flex justify-center">
         <Header />
       </span>
@@ -45,6 +45,6 @@ export default function App() {
       </Section>
 
       <Footer />
-    </span>
+    </>
   );
 }

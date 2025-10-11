@@ -120,6 +120,11 @@
   }
 }
 
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+  preferredStrategy: 'pseudoelements';
+}
+
 :root::selection {
   background: var(--primary);
   color: var(--primary-foreground);
