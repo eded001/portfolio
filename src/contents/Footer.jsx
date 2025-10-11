@@ -26,7 +26,9 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="flex flex-col justify-center pb-5 text-center text-base absolute bottom-0 w-full">
+        <footer className="flex flex-col justify-center pb-5 text-center text-base absolute bottom-0 w-full
+        max-lg:px-5
+        ">
             <p>Please, don't forget to follow me in my social medias</p>
 
             <ul className="flex justify-center space-x-5 my-2">

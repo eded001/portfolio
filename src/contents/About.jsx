@@ -3,9 +3,16 @@ import { me } from "../imgs/share";
 
 export default function About() {
     return (
-        <div className="grid place-items-center grid-cols-1 md:grid-cols-2 gap-8 py-10 p-50 max-sm:p-5">
+        <div className="grid place-items-center grid-cols-1 gap-8 py-10 px-10
+        md:grid-cols-2
+        max-sm:p-5
+        max-lg:p-5
+        ">
             <picture className="grid place-items-center">
-                <img src={me} className="rounded-xl w-3/4 max-sm:w-full" />
+                <img src={me} className="rounded-xl w-3/4
+                max-sm:w-full
+                max-lg:w-full
+                " />
             </picture>
 
             <div className="flex flex-col space-y-5 text-justify">

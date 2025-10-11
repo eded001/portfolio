@@ -62,7 +62,10 @@ export default function TechStack() {
     ));
 
   return (
-    <div className="space-y-6 w-full p-20 max-sm:p-5">
+    <div className="space-y-6 w-full p-20
+    max-sm:p-5
+    max-lg:p-5
+    ">
       <div className="space-y-2">
         <Title>Stacks</Title>
         <Subtitle>I can get ideas off the ground using...</Subtitle>

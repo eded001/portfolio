@@ -61,14 +61,20 @@ export default function Projects() {
     ];
 
     return (
-        <div className="space-y-6 pl-15 pr-15 max-sm:pl-5 max-sm:pr-5 pt-5 pb-5">
+        <div className="space-y-6 px-15 py-5
+        max-sm:px-5
+        max-lg:px-5
+        ">
             <Title>Projects</Title>
 
             <div className="flex flex-wrap gap-4 justify-center">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, id) => (
                         <Card key={id} className="bg-zinc-200 border-zinc-300 border gap-0">
-                            <CardHeader className="relative flex flex-col items-center justify-center h-75 overflow-hidden rounded-xl p-10 rounded-b-none border-b-2 border-zinc-400">
+                            <CardHeader className="relative flex flex-col items-center justify-center h-75 overflow-hidden rounded-xl p-10 rounded-b-none border-b-2 border-zinc-400
+                            max-sm:p-5
+                            max-lg:p-5
+                            ">
                                 <span
                                     className="absolute inset-0 bg-center bg-cover scale-110 blur-sm"
                                     style={{ backgroundImage: `url(${project.print})` }}
