@@ -30,7 +30,7 @@ export default function Header() {
         {
             icon: <SiGithub />,
             color: "bg-zinc-200 text-zinc-800 hover:bg-zinc-300 hover:text-black",
-            link: "https://github.com/eded.dev"
+            link: "https://github.com/eded001"
         }
     ];
 
