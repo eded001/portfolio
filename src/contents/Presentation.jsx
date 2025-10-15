@@ -79,7 +79,7 @@ export default function Presentation() {
                         <span className="font-medium">IT Technical Support Intern</span> at{" "}
                         <Tooltip className="font-medium">
                             <TooltipTrigger>
-                                <span className="font-medium">SEMCULT</span>
+                                <span className="font-medium border-b-2 border-zinc-600 border-dotted cursor-help">SEMCULT</span>
                             </TooltipTrigger>
                             <TooltipContent className="bg-zinc-900">
                                 <p>Secretaria Municipal de Cultura e Turismo de Belém</p>
