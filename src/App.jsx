@@ -15,7 +15,7 @@ import Footer from '@/contents/Footer';
 
 export default function App() {
   return (
-    <span className="relative">
+    <>
       <Header />
 
       <Section id="home">
@@ -43,6 +43,6 @@ export default function App() {
       </Section>
 
       <Footer />
-    </span>
+    </>
   );
 }
