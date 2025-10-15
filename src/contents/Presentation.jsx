@@ -76,7 +76,7 @@ export default function Presentation() {
                 <div className="text-center">
                     <b className="text-2xl text-zinc-800">Currently</b>
                     <p className="text-zinc-700">
-                        <span className="font-medium">IT technical support</span> at{" "}
+                        <span className="font-medium">IT Technical Support Intern</span> at{" "}
                         <Tooltip className="font-medium">
                             <TooltipTrigger>
                                 <span className="font-medium">SEMCULT</span>
