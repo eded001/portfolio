@@ -47,7 +47,7 @@ export default function TechStack() {
     stacks[category].map(({ icon: Icon, color, name }, index) => (
       <Card
         key={index}
-        className="flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform border-none shadow-md"
+        className="flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform border-none shadow-md cursor-pointer select-none"
         style={{ backgroundColor: color }}
 
       >
