@@ -1,9 +1,7 @@
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
 // Components
-import { Button } from "@/components/ui/button";
 import Logo from "@/components/Logo";
-import Anchor from "@/components/Anchor";
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 import { useEffect, useState } from "react";
 
@@ -57,9 +55,9 @@ export default function Header() {
                 <ul className="flex space-x-2 max-md:hidden max-sm:hidden">
                     {sections.map(section => (
                         <li key={section.name} className="text-zinc-700 hover:text-zinc-500">
-                            <Anchor href={section.href} target="_self">
+                            <a href={section.href} target="_self" rel="noopener noreferrer" className="transition-colors duration-300">
                                 {section.name}
-                            </Anchor>
+                            </a>
                         </li>
                     ))}
                 </ul>

@@ -1,7 +1,6 @@
 import Title from "@/components/Title";
 import Subtitle from "@/components/Subtitle";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 // icons
 import {

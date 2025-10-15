@@ -1,4 +1,3 @@
-import Title from "@/components/Title";
 import { Button } from "@/components/ui/button";
 import { IoIosMail } from "react-icons/io";
 import { SiLinkedin } from "react-icons/si";
