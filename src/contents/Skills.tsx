@@ -1,5 +1,5 @@
-import Title from "@/components/Title";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Title from "../components/Title";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { FaCode } from "react-icons/fa6";
 import { RiTeamLine } from "react-icons/ri";
 import { LuBrain } from "react-icons/lu";

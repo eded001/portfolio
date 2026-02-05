@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import { IoIosMail } from "react-icons/io";
 import { SiLinkedin } from "react-icons/si";
 

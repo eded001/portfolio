@@ -1,8 +1,8 @@
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
 // Components
-import Logo from "@/components/Logo";
-import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
+import Logo from "../components/Logo";
+import { LayoutTextFlip } from "../components/ui/layout-text-flip";
 import { useEffect, useState } from "react";
 
 export default function Header() {

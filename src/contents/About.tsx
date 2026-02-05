@@ -1,4 +1,4 @@
-import Title from "@/components/Title";
+import Title from "../components/Title";
 import { me } from "../imgs/share";
 
 export default function About() {
