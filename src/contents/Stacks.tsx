@@ -1,6 +1,14 @@
-import Title from "../components/Title";
-import Subtitle from "../components/Subtitle";
-import { Card, CardContent } from "../components/ui/card";
+import Title from "@/components/Title";
+import Subtitle from "@/components/Subtitle";
+import { Card, CardContent } from "@/components/ui";
+
+import type { IconType } from "react-icons";
+type StackItem = {
+  icon: IconType;
+  color: string;
+  name: string;
+};
+
 
 // icons
 import {
@@ -14,7 +22,7 @@ import {
 import { AiOutlineJava } from "react-icons/ai";
 
 export default function TechStack() {
-  const stacks = {
+  const stacks: Record<string, StackItem[]> = {
     frontEnd: [
       { icon: SiHtml5, color: "#E34F26", name: "HTML5" },
       { icon: SiCss3, color: "#1572B6", name: "CSS3" },
@@ -43,19 +51,16 @@ export default function TechStack() {
     ]
   };
 
-  const renderStack = (category) =>
+  const renderStack = (category: string) =>
     stacks[category].map(({ icon: Icon, color, name }, index) => (
       <Card
         key={index}
         className="flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform border-none shadow-md cursor-pointer select-none"
         style={{ backgroundColor: color }}
-
       >
         <CardContent className="flex flex-col items-center justify-center gap-2 p-0">
           <Icon size={36} color="white" className="drop-shadow-md" />
-          <p className="text-white">
-            {name}
-          </p>
+          <p className="text-white">{name}</p>
         </CardContent>
       </Card>
     ));

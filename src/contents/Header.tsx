@@ -1,8 +1,8 @@
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
 // Components
-import Logo from "../components/Logo";
-import { LayoutTextFlip } from "../components/ui/layout-text-flip";
+import Logo from "@/components/Logo";
+import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 import { useEffect, useState } from "react";
 
 export default function Header() {
@@ -39,7 +39,6 @@ export default function Header() {
             setCurrent((prev) => (prev + 1) % items.length);
         }, 5000);
         return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const { icon, color, link } = items[current];
@@ -63,7 +62,7 @@ export default function Header() {
                 </ul>
 
                 <a className={`${color} transition-all duration-500 p-2 rounded-sm`} href={link} target="_blank" rel="noopener noreferrer">
-                    <LayoutTextFlip key={current} text="" words={[icon]} />
+                    <LayoutTextFlip key={current} text="" words={[icon.toString()]} />
                 </a>
             </nav>
         </div>

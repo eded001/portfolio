@@ -1,10 +1,10 @@
-import Title from "../components/Title";
+import Title from "@/components/Title";
 import { LuExternalLink } from "react-icons/lu";
 
 // components
-import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from "../components/ui/card";
-import { Badge } from "../components/ui/badge";
-import { Button } from "../components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 // images
 import { aleitamentoMaterno, calopAgender, duckManager, helpNow } from "../imgs/share";

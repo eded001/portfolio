@@ -1,5 +1,5 @@
-import Title from "../components/Title";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import Title from "@/components/Title";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FaCode } from "react-icons/fa6";
 import { RiTeamLine } from "react-icons/ri";
 import { LuBrain } from "react-icons/lu";
@@ -40,9 +40,9 @@ export default function Skills() {
             lg:grid-cols-4
             ">
                 {
-                    // eslint-disable-next-line no-unused-vars
+
                     skills.map(({ icon: Icon, title, description }, index) => (
-                        <Card key={index} className="border-1 bg-zinc-400 h-60 w-75
+                        <Card key={index} className="border bg-zinc-400 h-60 w-75
                         max-sm:w-full
                         max-lg:w-full
                         ">

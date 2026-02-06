@@ -1,4 +1,4 @@
-import { Tooltip, TooltipContent, TooltipTrigger } from "../components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import Typewriter from "typewriter-effect";
 import { meFace } from "../imgs/share";
 
