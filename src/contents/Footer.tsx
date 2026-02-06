@@ -35,9 +35,6 @@ export default function Footer() {
                 {socialMedias.map((social) => (
                     <li
                         key={social.name}
-                        initial={{ color: "transparent" }}
-                        whileHover={{ color: social.hoverColor }}
-                        transition={{ duration: 0.3 }}
                         className={`${social.bg} bg-clip-text font-extrabold text-transparent p-1 rounded-md cursor-pointer`}
                     >
                         <a href={social.href} target="_blank" className={`${social.bg} bg-clip-text text-transparent`}>
