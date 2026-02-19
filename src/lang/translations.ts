@@ -96,8 +96,8 @@ export const translations = {
             titleLine2: "Entre em contato!",
             description1: "Adoro explorar novas oportunidades e parcerias.",
             description2: "Se tiver ideias de projetos ou dúvidas, fique à vontade para falar comigo.",
-            linkedin: "Ir para o LinkedIn",
-            email: "Enviar email",
+            linkedin: "Conectar-se no LinkedIn",
+            email: "Enviar um email",
             or: "ou"
         },
 
@@ -199,8 +199,8 @@ export const translations = {
             titleLine2: "Contact me!",
             description1: "I love exploring new opportunities and partnerships.",
             description2: "If you have any project ideas or questions, feel free to contact me.",
-            linkedin: "Go to LinkedIn",
-            email: "Send me an email",
+            linkedin: "Connect on LinkedIn",
+            email: "Send an email",
             or: "or"
         },
 
