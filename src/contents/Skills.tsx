@@ -5,57 +5,42 @@ import { RiTeamLine } from "react-icons/ri";
 import { LuBrain } from "react-icons/lu";
 import { ImMobile } from "react-icons/im";
 
+import { useT } from "@/hooks/useT";
+
 export default function Skills() {
+    const t = useT();
+
     const skills = [
-        {
-            title: "Full Stack Development",
-            description: "I design and develop complete applications, combining solid front-end experiences with robust back-end architectures. My focus is on performance, scalability, clean code, and seamless integration between APIs and SQL/NoSQL databases.",
-            icon: FaCode
-        },
-        {
-            title: "Mobile Development",
-            description: "I build modern, high-performance apps with responsive design and smooth navigation. I prioritize user experience, consistent UI patterns, and efficient integration with APIs and back-end systems.",
-            icon: ImMobile
-        },
-        {
-            title: "Leadership",
-            description: "I believe in collaborative leadership built on trust, empathy, and clear communication. I encourage teamwork, technical excellence, and decision-making that aligns with both the team's growth and project goals.",
-            icon: RiTeamLine
-        },
-        {
-            title: "Solving Problems",
-            description: "I approach challenges strategically, combining analytical thinking with creativity to find efficient and sustainable solutions. My focus is always on impact — solving real problems that improve user and business outcomes.",
-            icon: LuBrain
-        }
+        { key: "fullstack", icon: FaCode },
+        { key: "mobile", icon: ImMobile },
+        { key: "leadership", icon: RiTeamLine },
+        { key: "problemSolving", icon: LuBrain }
     ];
 
     return (
-        <div className="space-y-6
-        max-sm:p-5
-        ">
-            <Title>Skills</Title>
+        <div className="space-y-6 max-sm:p-5">
+            <Title>{t("skills.title")}</Title>
 
-            <div className="grid grid-cols-1 gap-6 w-full
-            sm:grid-cols-2
-            lg:grid-cols-4
-            ">
-                {
+            <div className="grid grid-cols-1 gap-6 w-full sm:grid-cols-2 lg:grid-cols-4">
+                {skills.map(({ key, icon: Icon }) => (
+                    <Card
+                        key={key}
+                        className="border bg-zinc-400 h-60 w-75 max-sm:w-full max-lg:w-full"
+                    >
+                        <CardHeader className="flex flex-row items-center bg-zinc-600 rounded-t-lg border-b-2 border-zinc-400 pl-2 pt-2 pb-2 text-xl">
+                            <Icon size={40} className="text-zinc-100" />
+                            <CardTitle className="font-bold text-zinc-300">
+                                {t(`skills.${key}.title`)}
+                            </CardTitle>
+                        </CardHeader>
 
-                    skills.map(({ icon: Icon, title, description }, index) => (
-                        <Card key={index} className="border bg-zinc-400 h-60 w-75
-                        max-sm:w-full
-                        max-lg:w-full
-                        ">
-                            <CardHeader className={"flex flex-row items-center bg-zinc-600 rounded-t-lg border-b-2 border-zinc-400 pl-2 pt-2 pb-2 text-xl"}>
-                                <Icon size={40} className="text-zinc-100" />
-                                <CardTitle className="font-bold text-zinc-300">{title}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <CardDescription className="text-zinc-700 font-medium text-justify">{description}</CardDescription>
-                            </CardContent>
-                        </Card>
-                    ))
-                }
+                        <CardContent>
+                            <CardDescription className="text-zinc-700 font-medium text-justify">
+                                {t(`skills.${key}.description`)}
+                            </CardDescription>
+                        </CardContent>
+                    </Card>
+                ))}
             </div>
         </div>
     );

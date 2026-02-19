@@ -1,14 +1,14 @@
 import Title from "@/components/Title";
 import Subtitle from "@/components/Subtitle";
-import { Card, CardContent } from "@/components/ui";
+import { useT } from "@/hooks/useT";
 
 import type { IconType } from "react-icons";
+
 type StackItem = {
   icon: IconType;
   color: string;
   name: string;
 };
-
 
 // icons
 import {
@@ -22,6 +22,8 @@ import {
 import { AiOutlineJava } from "react-icons/ai";
 
 export default function TechStack() {
+  const t = useT();
+
   const stacks: Record<string, StackItem[]> = {
     frontEnd: [
       { icon: SiHtml5, color: "#E34F26", name: "HTML5" },
@@ -53,50 +55,47 @@ export default function TechStack() {
 
   const renderStack = (category: string) =>
     stacks[category].map(({ icon: Icon, color, name }, index) => (
-      <Card
+      <div
         key={index}
-        className="flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform border-none shadow-md cursor-pointer select-none"
+        className="flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform shadow-md cursor-pointer select-none rounded-lg"
         style={{ backgroundColor: color }}
       >
-        <CardContent className="flex flex-col items-center justify-center gap-2 p-0">
-          <Icon size={36} color="white" className="drop-shadow-md" />
-          <p className="text-white">{name}</p>
-        </CardContent>
-      </Card>
+        <Icon size={36} color="white" className="drop-shadow-md" />
+        <p className="text-white">{name}</p>
+      </div>
     ));
 
   return (
-    <div className="space-y-6 w-full p-20
-    max-sm:p-5
-    max-lg:p-5
-    ">
+    <div className="space-y-6 w-full p-20 max-sm:p-5 max-lg:p-5">
       <div className="space-y-2">
-        <Title>Stacks</Title>
-        <Subtitle>I can get ideas off the ground using...</Subtitle>
+        <Title>{t("stacks.title")}</Title>
+        <Subtitle>{t("stacks.subtitle")}</Subtitle>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <section className="space-y-3">
           <h3 className="text-lg font-semibold text-center border-b pb-1">Front-End</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {renderStack("frontEnd")}
           </div>
         </section>
 
         <section className="space-y-3">
           <h3 className="text-lg font-semibold text-center border-b pb-1">Back-End</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {renderStack("backEnd")}
           </div>
         </section>
       </div>
 
-      <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-center border-b pb-1">Others</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+      <section className="space-y-3">
+        <h3 className="text-lg font-semibold text-center border-b pb-1">
+          {t("stacks.others")}
+        </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {renderStack("others")}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
