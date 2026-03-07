@@ -25,7 +25,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="flex flex-col justify-center text-center text-base bg-zinc-100 rounded-t-2xl py-5 max-lg:px-5">
+        <footer className="flex flex-col justify-center text-center text-base bg-zinc-100 py-5 max-lg:px-5">
             <p className="max-lg:hidden">
                 {t("footer.follow")}
             </p>
