@@ -8,7 +8,7 @@ export default function ContactMe() {
     const t = useT();
 
     return (
-        <div className="flex items-center justify-center flex-col gap-10 text-center h-[100vh] max-sm:px-5 max-lg:px-5">
+        <div className="flex items-center justify-center flex-col gap-10 text-center min-h-screen max-sm:px-5 max-lg:px-5">
             <h1 className="text-4xl font-bold text-zinc-900 max-lg:text-4xl">
                 {t("contact.titleLine1")} <br />
                 {t("contact.titleLine2")}
@@ -19,7 +19,8 @@ export default function ContactMe() {
                 {t("contact.description2")}
             </p>
 
-            <div className="flex gap-5 items-center">
+            <div className="flex gap-5 items-center flex-col
+            md:flex-row">
                 <Button
                     asChild
                     variant={"secondary"}
