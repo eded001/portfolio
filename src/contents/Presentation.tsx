@@ -1,5 +1,4 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { meFace } from "../imgs/share";
 import { useT } from "@/hooks/useT";
 
 export default function Presentation() {
@@ -25,7 +24,7 @@ export default function Presentation() {
             <div className="flex flex-col items-center relative">
                 <div className="w-75 relative z-10 flex justify-center">
                     <img
-                        src={meFace}
+                        src="https://avatars.githubusercontent.com/u/108343328?v=4"
                         className="rounded-full w-full shadow-xl max-lg:w-75"
                         alt="Profile"
                     />
